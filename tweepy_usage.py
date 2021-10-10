@@ -2,25 +2,8 @@
 import twitter_api 
 import pandas as pd
 import sys
-
-# Set up words to track  
-keywords_to_track = ['#javascript','#python']
-
-
-# function to display data of each tweet
-def printtweetdata(n, ith_tweet):
-    print()
-    print(f"Tweet {n}:")
-    print(f"Username:{ith_tweet[0]}")
-    print(f"Description:{ith_tweet[1]}")
-    print(f"Location:{ith_tweet[2]}")
-    print(f"Following Count:{ith_tweet[3]}")
-    print(f"Follower Count:{ith_tweet[4]}")
-    print(f"Total Tweets:{ith_tweet[5]}")
-    print(f"Retweet Count:{ith_tweet[6]}")
-    print(f"Tweet Text:{ith_tweet[7]}")
-    print(f"Hashtags Used:{ith_tweet[8]}")
-
+from save_to_csvfile import save_to_csv
+import json
 
 # function to perform data extraction
 def scrape(words, date_until, numtweet):
@@ -28,30 +11,43 @@ def scrape(words, date_until, numtweet):
     search_phrase = words
     tweets = twitter_api.my_api.search_tweets(q=search_phrase, count=numtweet)
     # detailes in https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/object-model/tweet
-    with open("sample_tweets_with_"+search_phrase+".txt", "w", encoding="utf-8") as f:
+    with open("sample_tweets_.txt", "w", encoding="utf-8") as f:
         for t in tweets:
-            print("Found id :" , t.id)
             f.write(f"""Created : {t.created_at} 
                         ID:{t.id} 
                         Text : {t.text}
                         User : {t.user}
                         retweet_count : {t.retweet_count}
                         favorite_count : {t.favorite_count}
+                        truncated : {t.truncated}
+                        entities  : {t.entities}
+                        username : {t.user.screen_name}
+                        followers_count : {t.user.followers_count}
+                        friends_count : {t.user.friends_count}
+                        favourites_count : {t.user.favourites_count}
+                        listed_count   : {t.user.listed_count}
+                        user created_at : {t.user.created_at}
+                        location : {t.user.location}
+                        hashtags : {t.entities['hashtags']}
+                        symbols  : {t.entities['symbols']}
                         \n\n""")
 
-
-  
+def scape_to_file(words, date_until, numtweet):
+    tweets = twitter_api.my_api.search_tweets(q=words, count=numtweet)
+    #save_to_csv(tweets, 'stock')
+    n=0
+    for t in tweets:
+        n += 1
+        #print("{} ".format(t).encode('cp850', errors='replace'))
+    print(n)
 if __name__ == '__main__':
-      
-
     # Enter Hashtag and initial date
     ## Enter Twitter HashTag to search for" 
-    words = "python"
-    
+    words = "stock"
     # Enter Date since The Tweets are required in yyyy-mm--dd
     date_until = "2019-01--01"
-      
     # number of tweets you want to extract in one run
-    numtweet = 100
+    numtweet = 5
     scrape(words, date_until, numtweet)
+    #scape_to_file(words, date_until, numtweet)
     print('Scraping has completed!')
