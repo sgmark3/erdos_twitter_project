@@ -1,3 +1,7 @@
+"""
+This set up gives only recent tweets, with a 7-days limit.
+"""
+
 
 import twitter_api 
 import pandas as pd
