@@ -1,7 +1,9 @@
-from typing import List
-
-
 def pos_neg_text_file_parse(pos, neg):
+    """
+    This function takes in two text files, positive and negative
+    words associated with a text library, and returns the words 
+    in a list.
+    """
     if not isinstance(pos, str) or not isinstance(neg, str):
         print('File names must be in string format.')
         return
