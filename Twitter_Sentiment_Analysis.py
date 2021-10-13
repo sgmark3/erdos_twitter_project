@@ -22,26 +22,26 @@ class Twitter_Sentiment_Analysis:
         self.neg_words = neg_words
 
 
-def pos_neg_counter(self, pos_library_name, neg_library_name):
-    if not isinstance(pos_library_name, str) or not isinstance(neg_library_name, str):
-        print('The library names need to be strings.')
-    try:
-        self.tweet_frame[pos_library_name], self.tweet_frame[neg_library_name] = self.tweet_frame['tweet'].apply(
-            get_word_counts, args=
-            (self.pos_words, self.neg_words,))
+    def pos_neg_counter(self, pos_library_name, neg_library_name):
+        if not isinstance(pos_library_name, str) or not isinstance(neg_library_name, str):
+            print('The library names need to be strings.')
+        try:
+            self.tweet_frame[pos_library_name], self.tweet_frame[neg_library_name] = self.tweet_frame['tweet'].apply(
+                get_word_counts, args=
+                (self.pos_words, self.neg_words,))
     except:
         print('Positive and Negative words not loaded correctly')
 
 
-def get_word_counts(text, pos_words, neg_words):
+def get_word_counts(text,self):
     count_pos = 0
     count_neg = 0
-    if not isinstance(pos_words, list) or not isinstance(neg_words, list):
+    if not isinstance(self.pos_words, list) or not isinstance(self.neg_words, list):
         print('The positive and negative words are not in list format.')
 
     for word in text:
-        if word in pos_words:
+        if word in self.pos_words:
             count_pos += 1
-        if word in neg_words:
+        if word in self.neg_words:
             count_neg += 1
     return [count_pos, count_neg]
