@@ -31,6 +31,7 @@ class twitter_sentiment_directional_indicators:
         
         if not isinstance(pos_library_name, str) or not isinstance(neg_library_name, str):
             print('The library names need to be strings.')
+            return
         try:
             self.tweet_frame[pos_library_name], self.tweet_frame[neg_library_name] = self.tweet_frame['tweet'].apply(
                 self.get_word_counts, args=
@@ -50,6 +51,7 @@ class twitter_sentiment_directional_indicators:
         count_neg = 0
         if not isinstance(self.pos_words, list) or not isinstance(self.neg_words, list):
             print('The positive and negative words are not in list format.')
+            return
 
         for word in text:
             if word in self.pos_words:
