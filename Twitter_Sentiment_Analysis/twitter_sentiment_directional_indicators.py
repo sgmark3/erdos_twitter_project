@@ -7,7 +7,7 @@
     # d. negNgrams = word counts of negative ngrams from Hagenau '13
 
 
-class Twitter_Sentiment_Directional_Indicators:
+class twitter_sentiment_directional_indicators:
     """
     This class computes the positive and negative sentiments associated with
     tweet data taken as input for the directional indicators. The scoring is 
