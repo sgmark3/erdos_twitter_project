@@ -23,6 +23,9 @@ class twitter_sentiment_directional_indicators:
 
     def pos_neg_counter(self, pos_library_name, neg_library_name):
          """
+          This function  computes the number of positive and negative words, for a 
+          given library, across all tweets and stores the counts in two new columns.
+          
           param pos_library_name: The name in the literature for the positive library
           param neg_library_name: The name in the literature for the negative library
           return: The twitter dataframe with columns augmented with 
@@ -43,6 +46,9 @@ class twitter_sentiment_directional_indicators:
 
     def get_word_counts(text,self):
         """
+        This function counts the number of positive and negative
+        words in a given text. 
+        
         param self.pos_words: The collection of positive words
         param self.neg_words: The collection of negative words
         param text: The text to be analyzed
