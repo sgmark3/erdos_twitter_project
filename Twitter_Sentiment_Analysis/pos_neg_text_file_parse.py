@@ -17,4 +17,5 @@ def pos_neg_text_file_parse(pos, neg):
 
     pos_words_list = pos_words.split()
     neg_words_list = neg_words.split()
+    del pos_words, neg_words #Free up memory
     return [pos_words_list, neg_words_list]
