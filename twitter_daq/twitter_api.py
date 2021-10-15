@@ -21,4 +21,10 @@ auth.set_access_token(tk.ACCESS_TOKEN_KEY, tk.ACCESS_TOKEN_SECRET)
 my_api = tweepy.API(auth)
 
 
-
+def bearer_oauth(r):
+    """
+    Method required by bearer token authentication.
+    """
+    r.headers["Authorization"] = f"Bearer {tk.BEARER_TOKEN}"
+    r.headers["User-Agent"] = tk.USER_AGENT
+    return r

@@ -1,27 +1,14 @@
+"""
+This set up gives full-archive Tweet search
+"""
+
 import requests
-import os
 import json
-from config import twitter_key as tk
-import csv
+from twitter_api import bearer_oauth
 
-# To set your environment variables in your terminal run the following line:
-# export 'BEARER_TOKEN'='<your_bearer_token>'
-bearer_token = tk.BEARER_TOKEN
-
-search_url = "https://api.twitter.com/2/tweets/search/recent"
-
-
-# check this for details 
-# https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-recent
-
-
-def bearer_oauth(r):
-    """
-    Method required by bearer token authentication.
-    """
-    r.headers["Authorization"] = f"Bearer {bearer_token}"
-    r.headers["User-Agent"] = "twitter_data_app"
-    return r
+search_url = "https://api.twitter.com/2/tweets/search/all"
+# check the following for details
+#  https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all
 
 def connect_to_endpoint(url, params):
     response = requests.get(url, auth=bearer_oauth, params=params)
@@ -34,18 +21,20 @@ def connect_to_endpoint(url, params):
 def main():
     # Optional params: start_time,end_time,since_id,until_id,max_results,next_token,
     # expansions,tweet.fields,media.fields,poll.fields,place.fields,user.fields
-    query_params = {'query': 'snp500', 
+    query_params = {'query': 'snp500 lang:en', 
                     'tweet.fields': 'author_id,created_at,public_metrics,source',
                     'expansions' :'author_id', 
                     'user.fields':'name,public_metrics', 
-                    'max_results' : 10 }  # max allowed is 100
+                    'max_results' : 10 ,
+                    'start_time': '2019-01-01T00:00:00Z',
+                    }  # max allowed is 100
     # json_response = connect_to_endpoint(search_url, query_params)
     # print(json.dumps(json_response, indent=4, sort_keys=True))
     # with open('finance.json', 'w', encoding="utf-8") as outfile:
     #     json.dump(json_response, outfile, indent=4, sort_keys=True)
 
 
-    json_response = connect_to_endpoint('https://api.twitter.com/1.1/search/tweets.json?q=nasa&result_type=popular', params=query_params)
+    json_response = connect_to_endpoint(search_url, params=query_params)
     print(json.dumps(json_response, indent=4, sort_keys=True))
 
 
