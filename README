@@ -1,32 +1,15 @@
+# Machine learning pipeline to extract a functional relationship between tweets and a stock's subsequent market reaction
 
 
-To do :
-    twitter api, get data
-    search string database
-    stock - industry connection
-    sentiment analysis
-    how to isolate tweets
+# Team Members: 
+- [Andrew McMillan]()
+- [Jithin Madhusudanan Sreekala]()
+- [Shashank Markande]()
+- [Yossathorn (Josh) Tawabutr]()
 
 
-Keys are stored in config.py
-Format:
-td ameritrade key 
-ameritrade_key = 'XXXXXXXXXXXXXXXXX'
+# Introduction and Motivation
 
-twitter_stuff
-class twitter_key:
-        APP_ID = "XXXXXXXXXXXXXXXXX"
-        USER_AGENT = "XXXXXXXXXXXXXXXXX"
-        CONSUMER_KEY       ="XXXXXXXXXXXXXXXXX"
-        CONSUMER_SECRET    = "XXXXXXXXXXXXXXXXX"
-        ACCESS_TOKEN_KEY   = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-        ACCESS_TOKEN_SECRET= "XXXXXXXXXXXXXXXXX"
-        BEARER_TOKEN       = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-class twitter_daq:
-        APP_ID = "XXXXXXXXXXXXXXXXX"
-        USER_AGENT = "XXXXXXXXXXXXXXXXX"
-        CONSUMER_KEY       ="XXXXXXXXXXXXXXXXX"
-        CONSUMER_SECRET    = "XXXXXXXXXXXXXXXXX"
-        ACCESS_TOKEN_KEY   = "XXXXXXXXXXXXXXXXX"
-        ACCESS_TOKEN_SECRET= "XXXXXXXXXXXXXXXXX"
-        BEARER_TOKEN       = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+# Data Gathering
+
+### Dataset Description
