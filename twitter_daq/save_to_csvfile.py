@@ -1,6 +1,8 @@
 
 import pandas as pd
 import json
+import os.path as os_path
+
 
 def unroll(data):
     tmp = {}
@@ -37,6 +39,7 @@ def unfold_dict(inputList=[] , parameter=None):
     This function takes in a list of dictionaries and returns 
     keys in that dictionary matching 'parameter'
     '''
+    if not isinstance(inputList, list): return ''
     out_string = ''
     for entities in inputList:
         if parameter in entities:
@@ -72,7 +75,6 @@ def save_to_csv(data, output_name=None):
 def json_to_csv(data, output_name=None):
     tweet_data = data['data']
     user_data  = data['includes']['users']
-    # media_data = data['includes']['media']
 
     tweet_data_unfolded = []
     for data in tweet_data:
@@ -82,49 +84,34 @@ def json_to_csv(data, output_name=None):
     for data in user_data:
         user_unfolded.append(flatten_dict(data))
     
-    # media_unfolded = []
-    # for data in media_data:
-    #     media_unfolded.append(flatten_dict(data))
-
     tweet_df = pd.DataFrame.from_dict(tweet_data_unfolded)
     tweet_df.rename(columns={"id": "tweet_id"}, inplace=True)
     user_df = pd.DataFrame.from_dict(user_unfolded)
     user_df.rename(columns={"id": "author_id"}, inplace=True)
-    # media_df = pd.DataFrame.from_dict(media_unfolded)
     
-    tweet_df.drop(['possibly_sensitive'], axis=1, inplace=True)
-    tweet_df.to_csv('data/'+'tweet_df.csv')
-    user_df.to_csv('data/'+'user_df.csv')
-    # media_df.to_csv('data/media_df.csv')
-    
-    result_df = tweet_df.merge(user_df, how='left', on='author_id')
-    result_df = tweet_df.merge(user_df, how='left', on='author_id')
-    result_df.to_csv('data/'+'result_df.csv')
-    # combined_list = []
-    # for data in tweet_data_unfolded:
-    #     for user in user_unfolded:
-    #         if data['author_id'] == user['id']:
-    #             d5 = {**data, **user}
-    #             combined_list.append(d5) 
+    # tweet_df.entities_hashtags = tweet_df.entities_hashtags.apply(lambda x: unfold_dict(x, 'tag') )
+    # tweet_df.entities_urls = tweet_df.entities_urls.apply(lambda x: unfold_dict(x, 'display_url') )
+    # user_df.entities_description_hashtags = user_df.entities_description_hashtags.apply(lambda x: unfold_dict(x, 'tag') )
 
-    # for data in tweet_data_unfolded:
-    #     if 'attachments' not in data: continue
-    #     for media in media_unfolded:
-    #         if data["attachments"]["media_keys"][0] == media['media_key']:
-    #             tmpdict = {**data, **media}
-    #             combined_list.append(tmpdict)
-    # # for d in combined_list:
-    # #     print("{} ".format(d).encode('cp850', errors='replace'))  
-    # final_df = pd.DataFrame.from_dict(combined_list)
-    # final_df.drop(['attachments_media_keys'], axis=1, inplace=True)
-    # if output_name is None:
-    #     output_name = 'out'
-    # final_df.to_csv('jsontocsv.csv')
+    result_df = tweet_df.merge(user_df, how='left', on='author_id', suffixes=('', '_user'))
+    column_to_remove = [
+        'attachments_media_keys',  'possibly_sensitive','entities_mentions', 'referenced_tweets', 'entities_hashtags' , 'entities_urls' , 'entities_description_hashtags',
+        'entities_annotations',  'profile_image_url', 'url', 'pinned_tweet_id', 'entities_cashtags', 'in_reply_to_user_id',
+        'entities_url_urls', 'entities_description_mentions', 'entities_description_urls', 'entities_description_cashtags']
+    for col_to_rm in column_to_remove:
+        if col_to_rm in result_df.columns:
+            result_df.drop([col_to_rm] , axis=1, inplace=True)
 
+    result_df.sort_index(axis=1, inplace=True)
+    if output_name is None:
+        output_name = 'out'
+    if os_path.isfile('data/'+output_name+'.csv'):
+        result_df.to_csv('data/'+output_name+'.csv', mode='a', header=False, index=False)
+    else:
+        result_df.to_csv('data/'+output_name+'.csv', index=False)
 
 
 if __name__ == "__main__":
     with open('snp500.json', "r") as infile:
         data = json.load(infile)
-    #print(json.dumps(data, indent=4, sort_keys=True)) 
     json_to_csv(data)
