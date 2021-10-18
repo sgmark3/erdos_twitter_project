@@ -16,7 +16,7 @@ def get_fullarchive_tweets(query='', end_date='2019-01-01T00:00:00Z', next_token
     """
     This function takes in a search term query and creates a csv file with json response from twitter
     """
-    query_params = {'query': query+' lang:en', 
+    query_params = {'query': query+' lang:en  -is:retweet', 
                     'tweet.fields': 'attachments,author_id,created_at,entities,id,in_reply_to_user_id,public_metrics,possibly_sensitive,referenced_tweets,source,text,withheld',
                     'expansions' :'attachments.media_keys,author_id,in_reply_to_user_id,entities.mentions.username,referenced_tweets.id,referenced_tweets.id.author_id', 
                     'user.fields':'created_at,id,location,entities,name,pinned_tweet_id,profile_image_url,public_metrics,url,username,withheld', 
@@ -50,7 +50,7 @@ def main():
     # https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all
 
     # first define what you want to search, if you have multiple wors, use OR, AND to concatenate
-    query = 'tsla OR aapl'
+    query = 'citi OR #C'
     # now define number of total tweets you want, should be greater than max_results_per_query
     number_of_tweets = 30
     # now define output file name
