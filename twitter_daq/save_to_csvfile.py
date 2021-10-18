@@ -116,10 +116,10 @@ def json_to_csv(data, output_name=None):
     ## now finally lets save to a csv file
     if output_name is None:
         output_name = 'out'
-    if os_path.isfile('data/'+output_name+'.csv'):
-        result_df.to_csv('data/'+output_name+'.csv', mode='a', header=False, index=False)
+    if os_path.isfile('data/Tweets_Raw/'+output_name+'.csv'):
+        result_df.to_csv('data/Tweets_Raw/'+output_name+'.csv', mode='a', header=False, index=False)
     else:
-        result_df.to_csv('data/'+output_name+'.csv', index=False)
+        result_df.to_csv('data/Tweets_Raw/'+output_name+'.csv', index=False)
 
 
 if __name__ == "__main__":

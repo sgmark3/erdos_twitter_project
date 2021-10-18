@@ -15,7 +15,7 @@ def save_sp500_tickers():
     # convert list to dataframe
     df=pd.DataFrame(df[0])
     print(df.head())
-    df.to_csv('snp500_list.csv', index=False)
+    df.to_csv('data/Stock_indices/snp500_list.csv', index=False)
 
 
 if __name__=="__main__":
