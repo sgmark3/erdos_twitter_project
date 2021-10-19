@@ -12,7 +12,7 @@ import re
 from datetime import datetime
 
 
-keycode = str(os.getenv('API_KEY'))    #set the environment variable to API_KEY to your api_key
+keycode = str(os.getenv('API_KEY'))    #set the environment variable 'API_KEY' to your api_key
 
 def load_data(t, api_key = keycode):
     url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=' + t + '&interval=1min&apikey=' + api_key
