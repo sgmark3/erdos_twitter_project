@@ -1,12 +1,3 @@
-#Directional indicators
-    # a. posWordsHe = word counts of positive words from Henry '08 (File already uploaded AM)
-    # b. negWordsHe = word counts of negative words from Henry '08 (File already uploaded AM)
-    # c. posWordsLM = word counts of positive words from Loughran and McDonald '11 (Still needed)
-    # d. negWordsLM = word counts of negative words from Loughran and McDonald '11 (Still needed)
-    # e. posNgrams = word counts of positive ngrams from Hagenau '13 (Still needed)
-    # d. negNgrams = word counts of negative ngrams from Hagenau '13 (Still needed)
-
-
 class twitter_sentiment_directional_indicators:
     """
     This class computes the positive and negative sentiments associated with
