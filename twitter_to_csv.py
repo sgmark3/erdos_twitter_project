@@ -8,7 +8,7 @@ from time import sleep
 import json
 
 search_url = "https://api.twitter.com/2/tweets/search/all"
-max_results_per_query = 10  # maximum requests per query, minimum is 10, maximum is 500
+max_results_per_query = 100  # maximum requests per query, minimum is 10, maximum is 500
 # check the following for details
 #  https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all
 
@@ -41,7 +41,7 @@ def get_fullarchive_tweets(query='', end_date='2021-01-01T00:00:00Z', next_token
     json_to_csv(json_response, filename)
     return json_response["meta"]
 
-def get_twitter_data(query='', numtweets=10, output_file=''):
+def get_twitter_data(query='', numtweets=500, output_file=''):
     next_token = None
     for n in range(int(numtweets/max_results_per_query)):
         output = get_fullarchive_tweets(query=query, next_token=next_token, filename=output_file )
