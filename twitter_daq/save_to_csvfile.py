@@ -1,4 +1,5 @@
 
+from typing import final
 import pandas as pd
 import json
 import os.path as os_path
@@ -75,6 +76,7 @@ def save_to_csv(data, output_name=None):
 def json_to_csv(data, output_name=None):
     tweet_data = data['data']              # this is tweet data
     user_data  = data['includes']['users'] # this is user data
+    media_data = data['includes']['media'] # this is media data
 
     # first get flattened dictionary
     tweet_data_unfolded = []
@@ -86,44 +88,63 @@ def json_to_csv(data, output_name=None):
     for data in user_data:
         user_unfolded.append(flatten_dict(data))
     
+    media_unfoldeded = []
+    for data in media_data:
+        media_unfoldeded.append(flatten_dict(data))
+
     tweet_df = pd.DataFrame.from_dict(tweet_data_unfolded)
     tweet_df.rename(columns={"id": "tweet_id"}, inplace=True)
+    tweet_df.rename(columns={"attachments_media_keys": "media_key"}, inplace=True)
+    tweet_df["media_key"] = tweet_df["media_key"].apply(lambda x: str(x[0]) if isinstance(x, list) else ' ' )
+
     user_df = pd.DataFrame.from_dict(user_unfolded)
     user_df.rename(columns={"id": "author_id"}, inplace=True)
-    
-    ## now if any columns contain dictionaries, unfold it using unfold_dict
-    ## think of better way to implement to include edge cases.
-    # tweet_df.entities_hashtags = tweet_df.entities_hashtags.apply(lambda x: unfold_dict(x, 'tag') )
-    # tweet_df.entities_urls = tweet_df.entities_urls.apply(lambda x: unfold_dict(x, 'display_url') )
-    # user_df.entities_description_hashtags = user_df.entities_description_hashtags.apply(lambda x: unfold_dict(x, 'tag') )
+    media_df = pd.DataFrame.from_dict(media_unfoldeded)
+    media_df["media_key"] = media_df["media_key"].apply(lambda x: str(x) )
+    media_df.rename(columns={"type": "media_type"}, inplace=True)
 
-    # now merge tweets with corresponding user parameters
+    # tweet_df.to_csv('data/Tweets_Raw/tweet_df.csv', index=False)
+    # user_df.to_csv('data/Tweets_Raw/user_df.csv', index=False)
+    # media_df.to_csv('data/Tweets_Raw/media_df.csv', index=False)
+
+    ## now merge tweets with corresponding user parameters
     result_df = tweet_df.merge(user_df, how='left', on='author_id', suffixes=('', '_user'))
+    result_df = result_df.merge(media_df, how='left', on='media_key', suffixes=('', '_media'))
 
-    # list any columns you want to remove
-    column_to_remove = [
-        'attachments_media_keys',  'possibly_sensitive','entities_mentions', 'referenced_tweets', 'entities_hashtags' , 'entities_urls' , 'entities_description_hashtags',
-        'entities_annotations',  'profile_image_url', 'url', 'pinned_tweet_id', 'entities_cashtags', 'in_reply_to_user_id',
-        'entities_url_urls', 'entities_description_mentions', 'entities_description_urls', 'entities_description_cashtags']
-    for col_to_rm in column_to_remove:
-        if col_to_rm in result_df.columns:
-            result_df.drop([col_to_rm] , axis=1, inplace=True)
-
-    # sort the columns, this makes appending data to the same file easier to handle. May need more debugging
-    result_df.sort_index(axis=1, inplace=True)
-
+    columns_to_add = ['author_id', 'created_at',
+       'entities_cashtags', 'entities_hashtags', 'entities_urls', 'tweet_id',
+       'possibly_sensitive', 'public_metrics_like_count',
+       'public_metrics_quote_count', 'public_metrics_reply_count',
+       'public_metrics_retweet_count', 'source', 'text',
+       'entities_mentions', 'in_reply_to_user_id',
+       'created_at_user', 'location', 'name',
+       'profile_image_url', 'public_metrics_followers_count',
+       'public_metrics_following_count', 'public_metrics_listed_count',
+       'public_metrics_tweet_count', 'username', 'media_type']
+    # columns not included : 'media_key', referenced_tweets, entities_annotations,'entities_url_urls',
+    #'pinned_tweet_id', 'entities_description_urls',
+    #'entities_description_hashtags', 'entities_description_cashtags',
+    #'entities_description_mentions'
+    final_df = pd.DataFrame(columns=columns_to_add)
+    for col in columns_to_add:
+        if col in result_df:
+            final_df[col] = result_df[col]
+    final_df.entities_hashtags = final_df.entities_hashtags.apply(lambda x: unfold_dict(x, 'tag') )
+    final_df.entities_cashtags = final_df.entities_cashtags.apply(lambda x: unfold_dict(x, 'tag') )
+    final_df.entities_urls = final_df.entities_urls.apply(lambda x: unfold_dict(x, 'display_url') )
+    final_df.entities_mentions = final_df.entities_mentions.apply(lambda x: unfold_dict(x, 'username') )
 
     ## now finally lets save to a csv file
     if output_name is None:
         output_name = 'out'
     if os_path.isfile('data/Tweets_Raw/'+output_name+'.csv'):
-        result_df.to_csv('data/Tweets_Raw/'+output_name+'.csv', mode='a', header=False, index=False)
+        final_df.to_csv('data/Tweets_Raw/'+output_name+'.csv', mode='a', header=False, index=False)
     else:
-        result_df.to_csv('data/Tweets_Raw/'+output_name+'.csv', index=False)
+        final_df.to_csv('data/Tweets_Raw/'+output_name+'.csv', index=False)
 
 
 if __name__ == "__main__":
     ## for testing, input a json file with response from twitter api
-    with open('snp500.json', "r") as infile:
+    with open('sample.json', "r") as infile:
         data = json.load(infile)
     json_to_csv(data)
