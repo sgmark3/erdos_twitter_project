@@ -3,7 +3,9 @@ from typing import final
 import pandas as pd
 import json
 import os.path as os_path
+from datetime import datetime
 
+fmt = '%Y-%m-%dT%H:%M:%S.000Z'
 
 def unroll(data):
     """
@@ -110,6 +112,11 @@ def json_to_csv(data, output_name=None):
     ## now merge tweets with corresponding user parameters
     result_df = tweet_df.merge(user_df, how='left', on='author_id', suffixes=('', '_user'))
     result_df = result_df.merge(media_df, how='left', on='media_key', suffixes=('', '_media'))
+    for col in ['created_at', 'created_at_user']:
+        result_df[col] = result_df[col].apply(lambda x: datetime.strptime(x, fmt) ) 
+        result_df[col] = result_df[col].dt.tz_localize('UTC')
+        result_df[col] = result_df[col].dt.tz_convert('US/Eastern').dt.tz_localize(None)
+
 
     columns_to_add = ['author_id', 'created_at',
        'entities_cashtags', 'entities_hashtags', 'entities_urls', 'tweet_id',
