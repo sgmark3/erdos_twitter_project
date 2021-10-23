@@ -1,0 +1,1075 @@
+special case ................. 
+ ticker: MMM , company: 3M  ||||||||||| query = #MMM OR $MMM OR (3M) 
+
+ticker: ABT , company: Abbott Laboratories  ||||||||||| query = #ABT OR $ABT OR (Abbott) 
+
+ticker: ABBV , company: AbbVie  ||||||||||| query = #ABBV OR $ABBV OR (AbbVie) 
+
+ticker: ABMD , company: Abiomed  ||||||||||| query = #ABMD OR $ABMD OR (Abiomed) 
+
+ticker: ACN , company: Accenture  ||||||||||| query = #ACN OR $ACN OR (Accenture) 
+
+ticker: ATVI , company: Activision Blizzard  ||||||||||| query = #ATVI OR $ATVI OR (Activision) 
+
+ticker: ADBE , company: Adobe  ||||||||||| query = #ADBE OR $ADBE OR (Adobe) 
+
+ticker: AMD , company: Advanced Micro Devices  ||||||||||| query = #AMD OR $AMD OR (Advanced) 
+
+ticker: AAP , company: Advance Auto Parts  ||||||||||| query = #AAP OR $AAP OR (Advance) 
+
+special case ................. 
+ ticker: AES , company: AES Corp  ||||||||||| query = #AES OR $AES OR (AES Corp) 
+
+ticker: AFL , company: Aflac  ||||||||||| query = #AFL OR $AFL OR (Aflac) 
+
+ticker: A , company: Agilent Technologies  ||||||||||| query = #A OR $A OR (Agilent) 
+
+special case ................. 
+ ticker: APD , company: Air Products & Chemicals  ||||||||||| query = #APD OR $APD OR (Air Products & Chemicals) 
+
+ticker: AKAM , company: Akamai Technologies  ||||||||||| query = #AKAM OR $AKAM OR (Akamai) 
+
+ticker: ALK , company: Alaska Air Group  ||||||||||| query = #ALK OR $ALK OR (Alaska) 
+
+ticker: ALB , company: Albemarle Corporation  ||||||||||| query = #ALB OR $ALB OR (Albemarle) 
+
+ticker: ARE , company: Alexandria Real Estate Equities  ||||||||||| query = #ARE OR $ARE OR (Alexandria) 
+
+ticker: ALGN , company: Align Technology  ||||||||||| query = #ALGN OR $ALGN OR (Align) 
+
+ticker: ALLE , company: Allegion  ||||||||||| query = #ALLE OR $ALLE OR (Allegion) 
+
+ticker: LNT , company: Alliant Energy  ||||||||||| query = #LNT OR $LNT OR (Alliant) 
+
+ticker: ALL , company: Allstate Corp  ||||||||||| query = #ALL OR $ALL OR (Allstate) 
+
+ticker: GOOGL , company: Alphabet (Class A)  ||||||||||| query = #GOOGL OR $GOOGL OR (Alphabet) 
+
+ticker: GOOG , company: Alphabet (Class C)  ||||||||||| query = #GOOG OR $GOOG OR (Alphabet) 
+
+ticker: MO , company: Altria Group  ||||||||||| query = #MO OR $MO OR (Altria) 
+
+ticker: AMZN , company: Amazon  ||||||||||| query = #AMZN OR $AMZN OR (Amazon) 
+
+ticker: AMCR , company: Amcor  ||||||||||| query = #AMCR OR $AMCR OR (Amcor) 
+
+ticker: AEE , company: Ameren Corp  ||||||||||| query = #AEE OR $AEE OR (Ameren) 
+
+ticker: AAL , company: American Airlines Group  ||||||||||| query = #AAL OR $AAL OR (American) 
+
+ticker: AEP , company: American Electric Power  ||||||||||| query = #AEP OR $AEP OR (American) 
+
+ticker: AXP , company: American Express  ||||||||||| query = #AXP OR $AXP OR (American) 
+
+ticker: AIG , company: American International Group  ||||||||||| query = #AIG OR $AIG OR (American) 
+
+ticker: AMT , company: American Tower  ||||||||||| query = #AMT OR $AMT OR (American) 
+
+ticker: AWK , company: American Water Works  ||||||||||| query = #AWK OR $AWK OR (American) 
+
+ticker: AMP , company: Ameriprise Financial  ||||||||||| query = #AMP OR $AMP OR (Ameriprise) 
+
+ticker: ABC , company: AmerisourceBergen  ||||||||||| query = #ABC OR $ABC OR (AmerisourceBergen) 
+
+ticker: AME , company: Ametek  ||||||||||| query = #AME OR $AME OR (Ametek) 
+
+ticker: AMGN , company: Amgen  ||||||||||| query = #AMGN OR $AMGN OR (Amgen) 
+
+ticker: APH , company: Amphenol  ||||||||||| query = #APH OR $APH OR (Amphenol) 
+
+ticker: ADI , company: Analog Devices  ||||||||||| query = #ADI OR $ADI OR (Analog) 
+
+ticker: ANSS , company: Ansys  ||||||||||| query = #ANSS OR $ANSS OR (Ansys) 
+
+ticker: ANTM , company: Anthem  ||||||||||| query = #ANTM OR $ANTM OR (Anthem) 
+
+special case ................. 
+ ticker: AON , company: Aon  ||||||||||| query = #AON OR $AON OR (Aon) 
+
+special case ................. 
+ ticker: AOS , company: A. O. Smith  ||||||||||| query = #AOS OR $AOS OR (A. O. Smith) 
+
+special case ................. 
+ ticker: APA , company: APA Corporation  ||||||||||| query = #APA OR $APA OR (APA Corporation) 
+
+ticker: AAPL , company: Apple  ||||||||||| query = #AAPL OR $AAPL OR (Apple) 
+
+ticker: AMAT , company: Applied Materials  ||||||||||| query = #AMAT OR $AMAT OR (Applied) 
+
+ticker: APTV , company: Aptiv  ||||||||||| query = #APTV OR $APTV OR (Aptiv) 
+
+special case ................. 
+ ticker: ADM , company: ADM  ||||||||||| query = #ADM OR $ADM OR (ADM) 
+
+ticker: ANET , company: Arista Networks  ||||||||||| query = #ANET OR $ANET OR (Arista) 
+
+ticker: AJG , company: Arthur J. Gallagher & Co.  ||||||||||| query = #AJG OR $AJG OR (Arthur) 
+
+ticker: AIZ , company: Assurant  ||||||||||| query = #AIZ OR $AIZ OR (Assurant) 
+
+ticker: T , company: AT&T  ||||||||||| query = #T OR $T OR (AT&T) 
+
+ticker: ATO , company: Atmos Energy  ||||||||||| query = #ATO OR $ATO OR (Atmos) 
+
+ticker: ADSK , company: Autodesk  ||||||||||| query = #ADSK OR $ADSK OR (Autodesk) 
+
+ticker: ADP , company: Automatic Data Processing  ||||||||||| query = #ADP OR $ADP OR (Automatic) 
+
+ticker: AZO , company: AutoZone  ||||||||||| query = #AZO OR $AZO OR (AutoZone) 
+
+ticker: AVB , company: AvalonBay Communities  ||||||||||| query = #AVB OR $AVB OR (AvalonBay) 
+
+ticker: AVY , company: Avery Dennison  ||||||||||| query = #AVY OR $AVY OR (Avery) 
+
+ticker: BKR , company: Baker Hughes  ||||||||||| query = #BKR OR $BKR OR (Baker) 
+
+ticker: BLL , company: Ball Corp  ||||||||||| query = #BLL OR $BLL OR (Ball) 
+
+ticker: BAC , company: Bank of America  ||||||||||| query = #BAC OR $BAC OR (Bank) 
+
+ticker: BBWI , company: Bath & Body Works, Inc.  ||||||||||| query = #BBWI OR $BBWI OR (Bath) 
+
+ticker: BAX , company: Baxter International  ||||||||||| query = #BAX OR $BAX OR (Baxter) 
+
+ticker: BDX , company: Becton Dickinson  ||||||||||| query = #BDX OR $BDX OR (Becton) 
+
+ticker: BRK.B , company: Berkshire Hathaway  ||||||||||| query = #BRK.B OR $BRK.B OR (Berkshire) 
+
+ticker: BBY , company: Best Buy  ||||||||||| query = #BBY OR $BBY OR (Best) 
+
+ticker: BIO , company: Bio-Rad Laboratories  ||||||||||| query = #BIO OR $BIO OR (Bio-Rad) 
+
+ticker: TECH , company: Bio-Techne  ||||||||||| query = #TECH OR $TECH OR (Bio-Techne) 
+
+ticker: BIIB , company: Biogen  ||||||||||| query = #BIIB OR $BIIB OR (Biogen) 
+
+ticker: BLK , company: BlackRock  ||||||||||| query = #BLK OR $BLK OR (BlackRock) 
+
+special case ................. 
+ ticker: BK , company: BNY Mellon  ||||||||||| query = #BK OR $BK OR (BNY Mellon) 
+
+ticker: BA , company: Boeing  ||||||||||| query = #BA OR $BA OR (Boeing) 
+
+ticker: BKNG , company: Booking Holdings  ||||||||||| query = #BKNG OR $BKNG OR (Booking) 
+
+ticker: BWA , company: BorgWarner  ||||||||||| query = #BWA OR $BWA OR (BorgWarner) 
+
+ticker: BXP , company: Boston Properties  ||||||||||| query = #BXP OR $BXP OR (Boston) 
+
+ticker: BSX , company: Boston Scientific  ||||||||||| query = #BSX OR $BSX OR (Boston) 
+
+ticker: BMY , company: Bristol Myers Squibb  ||||||||||| query = #BMY OR $BMY OR (Bristol) 
+
+ticker: AVGO , company: Broadcom  ||||||||||| query = #AVGO OR $AVGO OR (Broadcom) 
+
+ticker: BR , company: Broadridge Financial Solutions  ||||||||||| query = #BR OR $BR OR (Broadridge) 
+
+ticker: BRO , company: Brown & Brown  ||||||||||| query = #BRO OR $BRO OR (Brown) 
+
+ticker: BF.B , company: Brown–Forman  ||||||||||| query = #BF.B OR $BF.B OR (Brown–Forman) 
+
+special case ................. 
+ ticker: CHRW , company: C. H. Robinson  ||||||||||| query = #CHRW OR $CHRW OR (C. H. Robinson) 
+
+ticker: CDNS , company: Cadence Design Systems  ||||||||||| query = #CDNS OR $CDNS OR (Cadence) 
+
+ticker: CZR , company: Caesars Entertainment  ||||||||||| query = #CZR OR $CZR OR (Caesars) 
+
+ticker: CPB , company: Campbell Soup  ||||||||||| query = #CPB OR $CPB OR (Campbell) 
+
+ticker: COF , company: Capital One Financial  ||||||||||| query = #COF OR $COF OR (Capital) 
+
+ticker: CAH , company: Cardinal Health  ||||||||||| query = #CAH OR $CAH OR (Cardinal) 
+
+ticker: KMX , company: CarMax  ||||||||||| query = #KMX OR $KMX OR (CarMax) 
+
+ticker: CCL , company: Carnival Corporation  ||||||||||| query = #CCL OR $CCL OR (Carnival) 
+
+ticker: CARR , company: Carrier Global  ||||||||||| query = #CARR OR $CARR OR (Carrier) 
+
+ticker: CTLT , company: Catalent  ||||||||||| query = #CTLT OR $CTLT OR (Catalent) 
+
+ticker: CAT , company: Caterpillar  ||||||||||| query = #CAT OR $CAT OR (Caterpillar) 
+
+ticker: CBOE , company: Cboe Global Markets  ||||||||||| query = #CBOE OR $CBOE OR (Cboe) 
+
+ticker: CBRE , company: CBRE  ||||||||||| query = #CBRE OR $CBRE OR (CBRE) 
+
+special case ................. 
+ ticker: CDW , company: CDW  ||||||||||| query = #CDW OR $CDW OR (CDW) 
+
+ticker: CE , company: Celanese  ||||||||||| query = #CE OR $CE OR (Celanese) 
+
+ticker: CNC , company: Centene Corporation  ||||||||||| query = #CNC OR $CNC OR (Centene) 
+
+ticker: CNP , company: CenterPoint Energy  ||||||||||| query = #CNP OR $CNP OR (CenterPoint) 
+
+ticker: CDAY , company: Ceridian  ||||||||||| query = #CDAY OR $CDAY OR (Ceridian) 
+
+ticker: CERN , company: Cerner  ||||||||||| query = #CERN OR $CERN OR (Cerner) 
+
+special case ................. 
+ ticker: CF , company: CF Industries  ||||||||||| query = #CF OR $CF OR (CF Industries) 
+
+ticker: CRL , company: Charles River Laboratories  ||||||||||| query = #CRL OR $CRL OR (Charles) 
+
+ticker: SCHW , company: Charles Schwab Corporation  ||||||||||| query = #SCHW OR $SCHW OR (Charles) 
+
+ticker: CHTR , company: Charter Communications  ||||||||||| query = #CHTR OR $CHTR OR (Charter) 
+
+ticker: CVX , company: Chevron Corporation  ||||||||||| query = #CVX OR $CVX OR (Chevron) 
+
+ticker: CMG , company: Chipotle Mexican Grill  ||||||||||| query = #CMG OR $CMG OR (Chipotle) 
+
+ticker: CB , company: Chubb  ||||||||||| query = #CB OR $CB OR (Chubb) 
+
+ticker: CHD , company: Church & Dwight  ||||||||||| query = #CHD OR $CHD OR (Church) 
+
+ticker: CI , company: Cigna  ||||||||||| query = #CI OR $CI OR (Cigna) 
+
+ticker: CINF , company: Cincinnati Financial  ||||||||||| query = #CINF OR $CINF OR (Cincinnati) 
+
+ticker: CTAS , company: Cintas Corporation  ||||||||||| query = #CTAS OR $CTAS OR (Cintas) 
+
+ticker: CSCO , company: Cisco Systems  ||||||||||| query = #CSCO OR $CSCO OR (Cisco) 
+
+ticker: C , company: Citigroup  ||||||||||| query = #C OR $C OR (Citigroup) 
+
+ticker: CFG , company: Citizens Financial Group  ||||||||||| query = #CFG OR $CFG OR (Citizens) 
+
+ticker: CTXS , company: Citrix Systems  ||||||||||| query = #CTXS OR $CTXS OR (Citrix) 
+
+ticker: CLX , company: Clorox  ||||||||||| query = #CLX OR $CLX OR (Clorox) 
+
+special case ................. 
+ ticker: CME , company: CME Group  ||||||||||| query = #CME OR $CME OR (CME Group) 
+
+special case ................. 
+ ticker: CMS , company: CMS Energy  ||||||||||| query = #CMS OR $CMS OR (CMS Energy) 
+
+ticker: KO , company: Coca-Cola Company  ||||||||||| query = #KO OR $KO OR (Coca-Cola) 
+
+ticker: CTSH , company: Cognizant Technology Solutions  ||||||||||| query = #CTSH OR $CTSH OR (Cognizant) 
+
+ticker: CL , company: Colgate-Palmolive  ||||||||||| query = #CL OR $CL OR (Colgate-Palmolive) 
+
+ticker: CMCSA , company: Comcast  ||||||||||| query = #CMCSA OR $CMCSA OR (Comcast) 
+
+ticker: CMA , company: Comerica  ||||||||||| query = #CMA OR $CMA OR (Comerica) 
+
+ticker: CAG , company: Conagra Brands  ||||||||||| query = #CAG OR $CAG OR (Conagra) 
+
+ticker: COP , company: ConocoPhillips  ||||||||||| query = #COP OR $COP OR (ConocoPhillips) 
+
+ticker: ED , company: Consolidated Edison  ||||||||||| query = #ED OR $ED OR (Consolidated) 
+
+ticker: STZ , company: Constellation Brands  ||||||||||| query = #STZ OR $STZ OR (Constellation) 
+
+special case ................. 
+ ticker: COO , company: The Cooper Companies  ||||||||||| query = #COO OR $COO OR (The Cooper Companies) 
+
+ticker: CPRT , company: Copart  ||||||||||| query = #CPRT OR $CPRT OR (Copart) 
+
+ticker: GLW , company: Corning  ||||||||||| query = #GLW OR $GLW OR (Corning) 
+
+ticker: CTVA , company: Corteva  ||||||||||| query = #CTVA OR $CTVA OR (Corteva) 
+
+ticker: COST , company: Costco  ||||||||||| query = #COST OR $COST OR (Costco) 
+
+ticker: CTRA , company: Coterra  ||||||||||| query = #CTRA OR $CTRA OR (Coterra) 
+
+ticker: CCI , company: Crown Castle  ||||||||||| query = #CCI OR $CCI OR (Crown) 
+
+special case ................. 
+ ticker: CSX , company: CSX  ||||||||||| query = #CSX OR $CSX OR (CSX) 
+
+ticker: CMI , company: Cummins  ||||||||||| query = #CMI OR $CMI OR (Cummins) 
+
+special case ................. 
+ ticker: CVS , company: CVS Health  ||||||||||| query = #CVS OR $CVS OR (CVS Health) 
+
+special case ................. 
+ ticker: DHI , company: D. R. Horton  ||||||||||| query = #DHI OR $DHI OR (D. R. Horton) 
+
+ticker: DHR , company: Danaher Corporation  ||||||||||| query = #DHR OR $DHR OR (Danaher) 
+
+ticker: DRI , company: Darden Restaurants  ||||||||||| query = #DRI OR $DRI OR (Darden) 
+
+ticker: DVA , company: DaVita  ||||||||||| query = #DVA OR $DVA OR (DaVita) 
+
+ticker: DE , company: Deere & Co.  ||||||||||| query = #DE OR $DE OR (Deere) 
+
+ticker: DAL , company: Delta Air Lines  ||||||||||| query = #DAL OR $DAL OR (Delta) 
+
+ticker: XRAY , company: Dentsply Sirona  ||||||||||| query = #XRAY OR $XRAY OR (Dentsply) 
+
+ticker: DVN , company: Devon Energy  ||||||||||| query = #DVN OR $DVN OR (Devon) 
+
+ticker: DXCM , company: DexCom  ||||||||||| query = #DXCM OR $DXCM OR (DexCom) 
+
+ticker: FANG , company: Diamondback Energy  ||||||||||| query = #FANG OR $FANG OR (Diamondback) 
+
+ticker: DLR , company: Digital Realty Trust  ||||||||||| query = #DLR OR $DLR OR (Digital) 
+
+ticker: DFS , company: Discover Financial Services  ||||||||||| query = #DFS OR $DFS OR (Discover) 
+
+ticker: DISCA , company: Discovery (Series A)  ||||||||||| query = #DISCA OR $DISCA OR (Discovery) 
+
+ticker: DISCK , company: Discovery (Series C)  ||||||||||| query = #DISCK OR $DISCK OR (Discovery) 
+
+ticker: DISH , company: Dish Network  ||||||||||| query = #DISH OR $DISH OR (Dish) 
+
+ticker: DG , company: Dollar General  ||||||||||| query = #DG OR $DG OR (Dollar) 
+
+ticker: DLTR , company: Dollar Tree  ||||||||||| query = #DLTR OR $DLTR OR (Dollar) 
+
+ticker: D , company: Dominion Energy  ||||||||||| query = #D OR $D OR (Dominion) 
+
+ticker: DPZ , company: Domino's Pizza  ||||||||||| query = #DPZ OR $DPZ OR (Domino's) 
+
+ticker: DOV , company: Dover Corporation  ||||||||||| query = #DOV OR $DOV OR (Dover) 
+
+special case ................. 
+ ticker: DOW , company: Dow  ||||||||||| query = #DOW OR $DOW OR (Dow) 
+
+special case ................. 
+ ticker: DTE , company: DTE Energy  ||||||||||| query = #DTE OR $DTE OR (DTE Energy) 
+
+ticker: DUK , company: Duke Energy  ||||||||||| query = #DUK OR $DUK OR (Duke) 
+
+ticker: DRE , company: Duke Realty Corp  ||||||||||| query = #DRE OR $DRE OR (Duke) 
+
+ticker: DD , company: DuPont  ||||||||||| query = #DD OR $DD OR (DuPont) 
+
+special case ................. 
+ ticker: DXC , company: DXC Technology  ||||||||||| query = #DXC OR $DXC OR (DXC Technology) 
+
+ticker: EMN , company: Eastman Chemical  ||||||||||| query = #EMN OR $EMN OR (Eastman) 
+
+ticker: ETN , company: Eaton Corporation  ||||||||||| query = #ETN OR $ETN OR (Eaton) 
+
+ticker: EBAY , company: eBay  ||||||||||| query = #EBAY OR $EBAY OR (eBay) 
+
+ticker: ECL , company: Ecolab  ||||||||||| query = #ECL OR $ECL OR (Ecolab) 
+
+ticker: EIX , company: Edison International  ||||||||||| query = #EIX OR $EIX OR (Edison) 
+
+ticker: EW , company: Edwards Lifesciences  ||||||||||| query = #EW OR $EW OR (Edwards) 
+
+ticker: EA , company: Electronic Arts  ||||||||||| query = #EA OR $EA OR (Electronic) 
+
+ticker: EMR , company: Emerson Electric Company  ||||||||||| query = #EMR OR $EMR OR (Emerson) 
+
+ticker: ENPH , company: Enphase Energy  ||||||||||| query = #ENPH OR $ENPH OR (Enphase) 
+
+ticker: ETR , company: Entergy  ||||||||||| query = #ETR OR $ETR OR (Entergy) 
+
+special case ................. 
+ ticker: EOG , company: EOG Resources  ||||||||||| query = #EOG OR $EOG OR (EOG Resources) 
+
+ticker: EFX , company: Equifax  ||||||||||| query = #EFX OR $EFX OR (Equifax) 
+
+ticker: EQIX , company: Equinix  ||||||||||| query = #EQIX OR $EQIX OR (Equinix) 
+
+ticker: EQR , company: Equity Residential  ||||||||||| query = #EQR OR $EQR OR (Equity) 
+
+ticker: ESS , company: Essex Property Trust  ||||||||||| query = #ESS OR $ESS OR (Essex) 
+
+ticker: EL , company: Estée Lauder Companies  ||||||||||| query = #EL OR $EL OR (Estée) 
+
+ticker: ETSY , company: Etsy  ||||||||||| query = #ETSY OR $ETSY OR (Etsy) 
+
+ticker: EVRG , company: Evergy  ||||||||||| query = #EVRG OR $EVRG OR (Evergy) 
+
+ticker: ES , company: Eversource Energy  ||||||||||| query = #ES OR $ES OR (Eversource) 
+
+ticker: RE , company: Everest Re  ||||||||||| query = #RE OR $RE OR (Everest) 
+
+ticker: EXC , company: Exelon  ||||||||||| query = #EXC OR $EXC OR (Exelon) 
+
+ticker: EXPE , company: Expedia Group  ||||||||||| query = #EXPE OR $EXPE OR (Expedia) 
+
+ticker: EXPD , company: Expeditors  ||||||||||| query = #EXPD OR $EXPD OR (Expeditors) 
+
+ticker: EXR , company: Extra Space Storage  ||||||||||| query = #EXR OR $EXR OR (Extra) 
+
+ticker: XOM , company: ExxonMobil  ||||||||||| query = #XOM OR $XOM OR (ExxonMobil) 
+
+special case ................. 
+ ticker: FFIV , company: F5 Networks  ||||||||||| query = #FFIV OR $FFIV OR (F5 Networks) 
+
+ticker: FB , company: Facebook  ||||||||||| query = #FB OR $FB OR (Facebook) 
+
+ticker: FAST , company: Fastenal  ||||||||||| query = #FAST OR $FAST OR (Fastenal) 
+
+ticker: FRT , company: Federal Realty Investment Trust  ||||||||||| query = #FRT OR $FRT OR (Federal) 
+
+ticker: FDX , company: FedEx  ||||||||||| query = #FDX OR $FDX OR (FedEx) 
+
+ticker: FIS , company: Fidelity National Information Services  ||||||||||| query = #FIS OR $FIS OR (Fidelity) 
+
+ticker: FITB , company: Fifth Third Bancorp  ||||||||||| query = #FITB OR $FITB OR (Fifth) 
+
+ticker: FE , company: FirstEnergy  ||||||||||| query = #FE OR $FE OR (FirstEnergy) 
+
+ticker: FRC , company: First Republic Bank  ||||||||||| query = #FRC OR $FRC OR (First) 
+
+ticker: FISV , company: Fiserv  ||||||||||| query = #FISV OR $FISV OR (Fiserv) 
+
+ticker: FLT , company: Fleetcor  ||||||||||| query = #FLT OR $FLT OR (Fleetcor) 
+
+special case ................. 
+ ticker: FMC , company: FMC Corporation  ||||||||||| query = #FMC OR $FMC OR (FMC Corporation) 
+
+ticker: F , company: Ford  ||||||||||| query = #F OR $F OR (Ford) 
+
+ticker: FTNT , company: Fortinet  ||||||||||| query = #FTNT OR $FTNT OR (Fortinet) 
+
+ticker: FTV , company: Fortive  ||||||||||| query = #FTV OR $FTV OR (Fortive) 
+
+ticker: FBHS , company: Fortune Brands Home & Security  ||||||||||| query = #FBHS OR $FBHS OR (Fortune) 
+
+special case ................. 
+ ticker: FOXA , company: Fox Corporation (Class A)  ||||||||||| query = #FOXA OR $FOXA OR (Fox Corporation (Class A)) 
+
+special case ................. 
+ ticker: FOX , company: Fox Corporation (Class B)  ||||||||||| query = #FOX OR $FOX OR (Fox Corporation (Class B)) 
+
+ticker: BEN , company: Franklin Resources  ||||||||||| query = #BEN OR $BEN OR (Franklin) 
+
+ticker: FCX , company: Freeport-McMoRan  ||||||||||| query = #FCX OR $FCX OR (Freeport-McMoRan) 
+
+special case ................. 
+ ticker: GPS , company: Gap  ||||||||||| query = #GPS OR $GPS OR (Gap) 
+
+ticker: GRMN , company: Garmin  ||||||||||| query = #GRMN OR $GRMN OR (Garmin) 
+
+ticker: IT , company: Gartner  ||||||||||| query = #IT OR $IT OR (Gartner) 
+
+ticker: GNRC , company: Generac Holdings  ||||||||||| query = #GNRC OR $GNRC OR (Generac) 
+
+ticker: GD , company: General Dynamics  ||||||||||| query = #GD OR $GD OR (General) 
+
+ticker: GE , company: General Electric  ||||||||||| query = #GE OR $GE OR (General) 
+
+ticker: GIS , company: General Mills  ||||||||||| query = #GIS OR $GIS OR (General) 
+
+ticker: GM , company: General Motors  ||||||||||| query = #GM OR $GM OR (General) 
+
+ticker: GPC , company: Genuine Parts  ||||||||||| query = #GPC OR $GPC OR (Genuine) 
+
+ticker: GILD , company: Gilead Sciences  ||||||||||| query = #GILD OR $GILD OR (Gilead) 
+
+ticker: GL , company: Globe Life  ||||||||||| query = #GL OR $GL OR (Globe) 
+
+ticker: GPN , company: Global Payments  ||||||||||| query = #GPN OR $GPN OR (Global) 
+
+ticker: GS , company: Goldman Sachs  ||||||||||| query = #GS OR $GS OR (Goldman) 
+
+special case ................. 
+ ticker: GWW , company: W. W. Grainger  ||||||||||| query = #GWW OR $GWW OR (W. W. Grainger) 
+
+ticker: HAL , company: Halliburton  ||||||||||| query = #HAL OR $HAL OR (Halliburton) 
+
+ticker: HBI , company: Hanesbrands  ||||||||||| query = #HBI OR $HBI OR (Hanesbrands) 
+
+special case ................. 
+ ticker: HIG , company: The Hartford  ||||||||||| query = #HIG OR $HIG OR (The Hartford) 
+
+ticker: HAS , company: Hasbro  ||||||||||| query = #HAS OR $HAS OR (Hasbro) 
+
+special case ................. 
+ ticker: HCA , company: HCA Healthcare  ||||||||||| query = #HCA OR $HCA OR (HCA Healthcare) 
+
+ticker: PEAK , company: Healthpeak Properties  ||||||||||| query = #PEAK OR $PEAK OR (Healthpeak) 
+
+ticker: HSIC , company: Henry Schein  ||||||||||| query = #HSIC OR $HSIC OR (Henry) 
+
+special case ................. 
+ ticker: HSY , company: The Hershey Company  ||||||||||| query = #HSY OR $HSY OR (The Hershey Company) 
+
+ticker: HES , company: Hess Corporation  ||||||||||| query = #HES OR $HES OR (Hess) 
+
+ticker: HPE , company: Hewlett Packard Enterprise  ||||||||||| query = #HPE OR $HPE OR (Hewlett) 
+
+ticker: HLT , company: Hilton Worldwide  ||||||||||| query = #HLT OR $HLT OR (Hilton) 
+
+ticker: HOLX , company: Hologic  ||||||||||| query = #HOLX OR $HOLX OR (Hologic) 
+
+ticker: HD , company: Home Depot  ||||||||||| query = #HD OR $HD OR (Home) 
+
+ticker: HON , company: Honeywell  ||||||||||| query = #HON OR $HON OR (Honeywell) 
+
+ticker: HRL , company: Hormel  ||||||||||| query = #HRL OR $HRL OR (Hormel) 
+
+ticker: HST , company: Host Hotels & Resorts  ||||||||||| query = #HST OR $HST OR (Host) 
+
+ticker: HWM , company: Howmet Aerospace  ||||||||||| query = #HWM OR $HWM OR (Howmet) 
+
+special case ................. 
+ ticker: HPQ , company: HP  ||||||||||| query = #HPQ OR $HPQ OR (HP) 
+
+ticker: HUM , company: Humana  ||||||||||| query = #HUM OR $HUM OR (Humana) 
+
+ticker: HBAN , company: Huntington Bancshares  ||||||||||| query = #HBAN OR $HBAN OR (Huntington) 
+
+ticker: HII , company: Huntington Ingalls Industries  ||||||||||| query = #HII OR $HII OR (Huntington) 
+
+ticker: IEX , company: IDEX Corporation  ||||||||||| query = #IEX OR $IEX OR (IDEX) 
+
+ticker: IDXX , company: Idexx Laboratories  ||||||||||| query = #IDXX OR $IDXX OR (Idexx) 
+
+special case ................. 
+ ticker: INFO , company: IHS Markit  ||||||||||| query = #INFO OR $INFO OR (IHS Markit) 
+
+ticker: ITW , company: Illinois Tool Works  ||||||||||| query = #ITW OR $ITW OR (Illinois) 
+
+ticker: ILMN , company: Illumina  ||||||||||| query = #ILMN OR $ILMN OR (Illumina) 
+
+ticker: INCY , company: Incyte  ||||||||||| query = #INCY OR $INCY OR (Incyte) 
+
+ticker: IR , company: Ingersoll Rand  ||||||||||| query = #IR OR $IR OR (Ingersoll) 
+
+ticker: INTC , company: Intel  ||||||||||| query = #INTC OR $INTC OR (Intel) 
+
+ticker: ICE , company: Intercontinental Exchange  ||||||||||| query = #ICE OR $ICE OR (Intercontinental) 
+
+special case ................. 
+ ticker: IBM , company: IBM  ||||||||||| query = #IBM OR $IBM OR (IBM) 
+
+ticker: IP , company: International Paper  ||||||||||| query = #IP OR $IP OR (International) 
+
+ticker: IPG , company: Interpublic Group  ||||||||||| query = #IPG OR $IPG OR (Interpublic) 
+
+ticker: IFF , company: International Flavors & Fragrances  ||||||||||| query = #IFF OR $IFF OR (International) 
+
+ticker: INTU , company: Intuit  ||||||||||| query = #INTU OR $INTU OR (Intuit) 
+
+ticker: ISRG , company: Intuitive Surgical  ||||||||||| query = #ISRG OR $ISRG OR (Intuitive) 
+
+ticker: IVZ , company: Invesco  ||||||||||| query = #IVZ OR $IVZ OR (Invesco) 
+
+special case ................. 
+ ticker: IPGP , company: IPG Photonics  ||||||||||| query = #IPGP OR $IPGP OR (IPG Photonics) 
+
+ticker: IQV , company: IQVIA  ||||||||||| query = #IQV OR $IQV OR (IQVIA) 
+
+ticker: IRM , company: Iron Mountain  ||||||||||| query = #IRM OR $IRM OR (Iron) 
+
+ticker: JKHY , company: Jack Henry & Associates  ||||||||||| query = #JKHY OR $JKHY OR (Jack) 
+
+ticker: J , company: Jacobs Engineering Group  ||||||||||| query = #J OR $J OR (Jacobs) 
+
+special case ................. 
+ ticker: JBHT , company: J. B. Hunt  ||||||||||| query = #JBHT OR $JBHT OR (J. B. Hunt) 
+
+special case ................. 
+ ticker: SJM , company: JM Smucker  ||||||||||| query = #SJM OR $SJM OR (JM Smucker) 
+
+ticker: JNJ , company: Johnson & Johnson  ||||||||||| query = #JNJ OR $JNJ OR (Johnson) 
+
+ticker: JCI , company: Johnson Controls  ||||||||||| query = #JCI OR $JCI OR (Johnson) 
+
+ticker: JPM , company: JPMorgan Chase  ||||||||||| query = #JPM OR $JPM OR (JPMorgan) 
+
+ticker: JNPR , company: Juniper Networks  ||||||||||| query = #JNPR OR $JNPR OR (Juniper) 
+
+ticker: KSU , company: Kansas City Southern  ||||||||||| query = #KSU OR $KSU OR (Kansas) 
+
+ticker: K , company: Kellogg's  ||||||||||| query = #K OR $K OR (Kellogg's) 
+
+ticker: KEY , company: KeyCorp  ||||||||||| query = #KEY OR $KEY OR (KeyCorp) 
+
+ticker: KEYS , company: Keysight Technologies  ||||||||||| query = #KEYS OR $KEYS OR (Keysight) 
+
+ticker: KMB , company: Kimberly-Clark  ||||||||||| query = #KMB OR $KMB OR (Kimberly-Clark) 
+
+ticker: KIM , company: Kimco Realty  ||||||||||| query = #KIM OR $KIM OR (Kimco) 
+
+ticker: KMI , company: Kinder Morgan  ||||||||||| query = #KMI OR $KMI OR (Kinder) 
+
+special case ................. 
+ ticker: KLAC , company: KLA Corporation  ||||||||||| query = #KLAC OR $KLAC OR (KLA Corporation) 
+
+ticker: KHC , company: Kraft Heinz  ||||||||||| query = #KHC OR $KHC OR (Kraft) 
+
+ticker: KR , company: Kroger  ||||||||||| query = #KR OR $KR OR (Kroger) 
+
+ticker: LHX , company: L3Harris Technologies  ||||||||||| query = #LHX OR $LHX OR (L3Harris) 
+
+ticker: LH , company: LabCorp  ||||||||||| query = #LH OR $LH OR (LabCorp) 
+
+special case ................. 
+ ticker: LRCX , company: Lam Research  ||||||||||| query = #LRCX OR $LRCX OR (Lam Research) 
+
+ticker: LW , company: Lamb Weston  ||||||||||| query = #LW OR $LW OR (Lamb) 
+
+special case ................. 
+ ticker: LVS , company: Las Vegas Sands  ||||||||||| query = #LVS OR $LVS OR (Las Vegas Sands) 
+
+ticker: LEG , company: Leggett & Platt  ||||||||||| query = #LEG OR $LEG OR (Leggett) 
+
+ticker: LDOS , company: Leidos  ||||||||||| query = #LDOS OR $LDOS OR (Leidos) 
+
+ticker: LEN , company: Lennar  ||||||||||| query = #LEN OR $LEN OR (Lennar) 
+
+special case ................. 
+ ticker: LLY , company: Eli Lilly & Co  ||||||||||| query = #LLY OR $LLY OR (Eli Lilly & Co) 
+
+ticker: LNC , company: Lincoln National  ||||||||||| query = #LNC OR $LNC OR (Lincoln) 
+
+ticker: LIN , company: Linde  ||||||||||| query = #LIN OR $LIN OR (Linde) 
+
+ticker: LYV , company: Live Nation Entertainment  ||||||||||| query = #LYV OR $LYV OR (Live) 
+
+special case ................. 
+ ticker: LKQ , company: LKQ Corporation  ||||||||||| query = #LKQ OR $LKQ OR (LKQ Corporation) 
+
+ticker: LMT , company: Lockheed Martin  ||||||||||| query = #LMT OR $LMT OR (Lockheed) 
+
+ticker: L , company: Loews Corporation  ||||||||||| query = #L OR $L OR (Loews) 
+
+ticker: LOW , company: Lowe's  ||||||||||| query = #LOW OR $LOW OR (Lowe's) 
+
+ticker: LUMN , company: Lumen Technologies  ||||||||||| query = #LUMN OR $LUMN OR (Lumen) 
+
+ticker: LYB , company: LyondellBasell  ||||||||||| query = #LYB OR $LYB OR (LyondellBasell) 
+
+special case ................. 
+ ticker: MTB , company: M&T Bank  ||||||||||| query = #MTB OR $MTB OR (M&T Bank) 
+
+ticker: MRO , company: Marathon Oil  ||||||||||| query = #MRO OR $MRO OR (Marathon) 
+
+ticker: MPC , company: Marathon Petroleum  ||||||||||| query = #MPC OR $MPC OR (Marathon) 
+
+ticker: MKTX , company: MarketAxess  ||||||||||| query = #MKTX OR $MKTX OR (MarketAxess) 
+
+ticker: MAR , company: Marriott International  ||||||||||| query = #MAR OR $MAR OR (Marriott) 
+
+ticker: MMC , company: Marsh & McLennan  ||||||||||| query = #MMC OR $MMC OR (Marsh) 
+
+ticker: MLM , company: Martin Marietta Materials  ||||||||||| query = #MLM OR $MLM OR (Martin) 
+
+ticker: MAS , company: Masco  ||||||||||| query = #MAS OR $MAS OR (Masco) 
+
+ticker: MA , company: Mastercard  ||||||||||| query = #MA OR $MA OR (Mastercard) 
+
+ticker: MTCH , company: Match Group  ||||||||||| query = #MTCH OR $MTCH OR (Match) 
+
+ticker: MKC , company: McCormick & Company  ||||||||||| query = #MKC OR $MKC OR (McCormick) 
+
+ticker: MCD , company: McDonald's  ||||||||||| query = #MCD OR $MCD OR (McDonald's) 
+
+ticker: MCK , company: McKesson Corporation  ||||||||||| query = #MCK OR $MCK OR (McKesson) 
+
+ticker: MDT , company: Medtronic  ||||||||||| query = #MDT OR $MDT OR (Medtronic) 
+
+ticker: MRK , company: Merck & Co.  ||||||||||| query = #MRK OR $MRK OR (Merck) 
+
+ticker: MET , company: MetLife  ||||||||||| query = #MET OR $MET OR (MetLife) 
+
+ticker: MTD , company: Mettler Toledo  ||||||||||| query = #MTD OR $MTD OR (Mettler) 
+
+special case ................. 
+ ticker: MGM , company: MGM Resorts International  ||||||||||| query = #MGM OR $MGM OR (MGM Resorts International) 
+
+ticker: MCHP , company: Microchip Technology  ||||||||||| query = #MCHP OR $MCHP OR (Microchip) 
+
+ticker: MU , company: Micron Technology  ||||||||||| query = #MU OR $MU OR (Micron) 
+
+ticker: MSFT , company: Microsoft  ||||||||||| query = #MSFT OR $MSFT OR (Microsoft) 
+
+ticker: MAA , company: Mid-America Apartments  ||||||||||| query = #MAA OR $MAA OR (Mid-America) 
+
+ticker: MRNA , company: Moderna  ||||||||||| query = #MRNA OR $MRNA OR (Moderna) 
+
+ticker: MHK , company: Mohawk Industries  ||||||||||| query = #MHK OR $MHK OR (Mohawk) 
+
+ticker: TAP , company: Molson Coors Beverage Company  ||||||||||| query = #TAP OR $TAP OR (Molson) 
+
+ticker: MDLZ , company: Mondelez International  ||||||||||| query = #MDLZ OR $MDLZ OR (Mondelez) 
+
+ticker: MPWR , company: Monolithic Power Systems  ||||||||||| query = #MPWR OR $MPWR OR (Monolithic) 
+
+ticker: MNST , company: Monster Beverage  ||||||||||| query = #MNST OR $MNST OR (Monster) 
+
+ticker: MCO , company: Moody's Corporation  ||||||||||| query = #MCO OR $MCO OR (Moody's) 
+
+ticker: MS , company: Morgan Stanley  ||||||||||| query = #MS OR $MS OR (Morgan) 
+
+special case ................. 
+ ticker: MOS , company: The Mosaic Company  ||||||||||| query = #MOS OR $MOS OR (The Mosaic Company) 
+
+ticker: MSI , company: Motorola Solutions  ||||||||||| query = #MSI OR $MSI OR (Motorola) 
+
+ticker: MSCI , company: MSCI  ||||||||||| query = #MSCI OR $MSCI OR (MSCI) 
+
+ticker: NDAQ , company: Nasdaq  ||||||||||| query = #NDAQ OR $NDAQ OR (Nasdaq) 
+
+ticker: NTAP , company: NetApp  ||||||||||| query = #NTAP OR $NTAP OR (NetApp) 
+
+ticker: NFLX , company: Netflix  ||||||||||| query = #NFLX OR $NFLX OR (Netflix) 
+
+ticker: NWL , company: Newell Brands  ||||||||||| query = #NWL OR $NWL OR (Newell) 
+
+ticker: NEM , company: Newmont  ||||||||||| query = #NEM OR $NEM OR (Newmont) 
+
+ticker: NWSA , company: News Corp (Class A)  ||||||||||| query = #NWSA OR $NWSA OR (News) 
+
+ticker: NWS , company: News Corp (Class B)  ||||||||||| query = #NWS OR $NWS OR (News) 
+
+ticker: NEE , company: NextEra Energy  ||||||||||| query = #NEE OR $NEE OR (NextEra) 
+
+ticker: NLSN , company: Nielsen Holdings  ||||||||||| query = #NLSN OR $NLSN OR (Nielsen) 
+
+ticker: NKE , company: Nike  ||||||||||| query = #NKE OR $NKE OR (Nike) 
+
+ticker: NI , company: NiSource  ||||||||||| query = #NI OR $NI OR (NiSource) 
+
+ticker: NSC , company: Norfolk Southern  ||||||||||| query = #NSC OR $NSC OR (Norfolk) 
+
+ticker: NTRS , company: Northern Trust  ||||||||||| query = #NTRS OR $NTRS OR (Northern) 
+
+ticker: NOC , company: Northrop Grumman  ||||||||||| query = #NOC OR $NOC OR (Northrop) 
+
+ticker: NLOK , company: NortonLifeLock  ||||||||||| query = #NLOK OR $NLOK OR (NortonLifeLock) 
+
+ticker: NCLH , company: Norwegian Cruise Line Holdings  ||||||||||| query = #NCLH OR $NCLH OR (Norwegian) 
+
+special case ................. 
+ ticker: NRG , company: NRG Energy  ||||||||||| query = #NRG OR $NRG OR (NRG Energy) 
+
+ticker: NUE , company: Nucor  ||||||||||| query = #NUE OR $NUE OR (Nucor) 
+
+ticker: NVDA , company: Nvidia  ||||||||||| query = #NVDA OR $NVDA OR (Nvidia) 
+
+special case ................. 
+ ticker: NVR , company: NVR  ||||||||||| query = #NVR OR $NVR OR (NVR) 
+
+special case ................. 
+ ticker: NXPI , company: NXP  ||||||||||| query = #NXPI OR $NXPI OR (NXP) 
+
+ticker: ORLY , company: O'Reilly Automotive  ||||||||||| query = #ORLY OR $ORLY OR (O'Reilly) 
+
+ticker: OXY , company: Occidental Petroleum  ||||||||||| query = #OXY OR $OXY OR (Occidental) 
+
+special case ................. 
+ ticker: ODFL , company: Old Dominion Freight Line  ||||||||||| query = #ODFL OR $ODFL OR (Old Dominion Freight Line) 
+
+ticker: OMC , company: Omnicom Group  ||||||||||| query = #OMC OR $OMC OR (Omnicom) 
+
+ticker: OKE , company: Oneok  ||||||||||| query = #OKE OR $OKE OR (Oneok) 
+
+ticker: ORCL , company: Oracle  ||||||||||| query = #ORCL OR $ORCL OR (Oracle) 
+
+ticker: OGN , company: Organon & Co.  ||||||||||| query = #OGN OR $OGN OR (Organon) 
+
+ticker: OTIS , company: Otis Worldwide  ||||||||||| query = #OTIS OR $OTIS OR (Otis) 
+
+ticker: PCAR , company: Paccar  ||||||||||| query = #PCAR OR $PCAR OR (Paccar) 
+
+ticker: PKG , company: Packaging Corporation of America  ||||||||||| query = #PKG OR $PKG OR (Packaging) 
+
+ticker: PH , company: Parker-Hannifin  ||||||||||| query = #PH OR $PH OR (Parker-Hannifin) 
+
+ticker: PAYX , company: Paychex  ||||||||||| query = #PAYX OR $PAYX OR (Paychex) 
+
+ticker: PAYC , company: Paycom  ||||||||||| query = #PAYC OR $PAYC OR (Paycom) 
+
+ticker: PYPL , company: PayPal  ||||||||||| query = #PYPL OR $PYPL OR (PayPal) 
+
+ticker: PENN , company: Penn National Gaming  ||||||||||| query = #PENN OR $PENN OR (Penn) 
+
+ticker: PNR , company: Pentair  ||||||||||| query = #PNR OR $PNR OR (Pentair) 
+
+ticker: PBCT , company: People's United Financial  ||||||||||| query = #PBCT OR $PBCT OR (People's) 
+
+ticker: PEP , company: PepsiCo  ||||||||||| query = #PEP OR $PEP OR (PepsiCo) 
+
+ticker: PKI , company: PerkinElmer  ||||||||||| query = #PKI OR $PKI OR (PerkinElmer) 
+
+ticker: PFE , company: Pfizer  ||||||||||| query = #PFE OR $PFE OR (Pfizer) 
+
+ticker: PM , company: Philip Morris International  ||||||||||| query = #PM OR $PM OR (Philip) 
+
+ticker: PSX , company: Phillips 66  ||||||||||| query = #PSX OR $PSX OR (Phillips) 
+
+ticker: PNW , company: Pinnacle West Capital  ||||||||||| query = #PNW OR $PNW OR (Pinnacle) 
+
+ticker: PXD , company: Pioneer Natural Resources  ||||||||||| query = #PXD OR $PXD OR (Pioneer) 
+
+special case ................. 
+ ticker: PNC , company: PNC Financial Services  ||||||||||| query = #PNC OR $PNC OR (PNC Financial Services) 
+
+ticker: POOL , company: Pool Corporation  ||||||||||| query = #POOL OR $POOL OR (Pool) 
+
+special case ................. 
+ ticker: PPG , company: PPG Industries  ||||||||||| query = #PPG OR $PPG OR (PPG Industries) 
+
+special case ................. 
+ ticker: PPL , company: PPL  ||||||||||| query = #PPL OR $PPL OR (PPL) 
+
+ticker: PFG , company: Principal Financial Group  ||||||||||| query = #PFG OR $PFG OR (Principal) 
+
+ticker: PG , company: Procter & Gamble  ||||||||||| query = #PG OR $PG OR (Procter) 
+
+ticker: PGR , company: Progressive Corporation  ||||||||||| query = #PGR OR $PGR OR (Progressive) 
+
+ticker: PLD , company: Prologis  ||||||||||| query = #PLD OR $PLD OR (Prologis) 
+
+ticker: PRU , company: Prudential Financial  ||||||||||| query = #PRU OR $PRU OR (Prudential) 
+
+special case ................. 
+ ticker: PTC , company: PTC  ||||||||||| query = #PTC OR $PTC OR (PTC) 
+
+ticker: PEG , company: Public Service Enterprise Group  ||||||||||| query = #PEG OR $PEG OR (Public) 
+
+ticker: PSA , company: Public Storage  ||||||||||| query = #PSA OR $PSA OR (Public) 
+
+ticker: PHM , company: PulteGroup  ||||||||||| query = #PHM OR $PHM OR (PulteGroup) 
+
+special case ................. 
+ ticker: PVH , company: PVH  ||||||||||| query = #PVH OR $PVH OR (PVH) 
+
+ticker: QRVO , company: Qorvo  ||||||||||| query = #QRVO OR $QRVO OR (Qorvo) 
+
+ticker: PWR , company: Quanta Services  ||||||||||| query = #PWR OR $PWR OR (Quanta) 
+
+ticker: QCOM , company: Qualcomm  ||||||||||| query = #QCOM OR $QCOM OR (Qualcomm) 
+
+ticker: DGX , company: Quest Diagnostics  ||||||||||| query = #DGX OR $DGX OR (Quest) 
+
+ticker: RL , company: Ralph Lauren Corporation  ||||||||||| query = #RL OR $RL OR (Ralph) 
+
+ticker: RJF , company: Raymond James Financial  ||||||||||| query = #RJF OR $RJF OR (Raymond) 
+
+ticker: RTX , company: Raytheon Technologies  ||||||||||| query = #RTX OR $RTX OR (Raytheon) 
+
+ticker: O , company: Realty Income Corporation  ||||||||||| query = #O OR $O OR (Realty) 
+
+ticker: REG , company: Regency Centers  ||||||||||| query = #REG OR $REG OR (Regency) 
+
+ticker: REGN , company: Regeneron Pharmaceuticals  ||||||||||| query = #REGN OR $REGN OR (Regeneron) 
+
+ticker: RF , company: Regions Financial Corporation  ||||||||||| query = #RF OR $RF OR (Regions) 
+
+ticker: RSG , company: Republic Services  ||||||||||| query = #RSG OR $RSG OR (Republic) 
+
+ticker: RMD , company: ResMed  ||||||||||| query = #RMD OR $RMD OR (ResMed) 
+
+ticker: RHI , company: Robert Half International  ||||||||||| query = #RHI OR $RHI OR (Robert) 
+
+ticker: ROK , company: Rockwell Automation  ||||||||||| query = #ROK OR $ROK OR (Rockwell) 
+
+ticker: ROL , company: Rollins  ||||||||||| query = #ROL OR $ROL OR (Rollins) 
+
+ticker: ROP , company: Roper Technologies  ||||||||||| query = #ROP OR $ROP OR (Roper) 
+
+ticker: ROST , company: Ross Stores  ||||||||||| query = #ROST OR $ROST OR (Ross) 
+
+ticker: RCL , company: Royal Caribbean Group  ||||||||||| query = #RCL OR $RCL OR (Royal) 
+
+special case ................. 
+ ticker: SPGI , company: S&P Global  ||||||||||| query = #SPGI OR $SPGI OR (S&P Global) 
+
+ticker: CRM , company: Salesforce  ||||||||||| query = #CRM OR $CRM OR (Salesforce) 
+
+special case ................. 
+ ticker: SBAC , company: SBA Communications  ||||||||||| query = #SBAC OR $SBAC OR (SBA Communications) 
+
+ticker: SLB , company: Schlumberger  ||||||||||| query = #SLB OR $SLB OR (Schlumberger) 
+
+ticker: STX , company: Seagate Technology  ||||||||||| query = #STX OR $STX OR (Seagate) 
+
+ticker: SEE , company: Sealed Air  ||||||||||| query = #SEE OR $SEE OR (Sealed) 
+
+ticker: SRE , company: Sempra Energy  ||||||||||| query = #SRE OR $SRE OR (Sempra) 
+
+ticker: NOW , company: ServiceNow  ||||||||||| query = #NOW OR $NOW OR (ServiceNow) 
+
+ticker: SHW , company: Sherwin-Williams  ||||||||||| query = #SHW OR $SHW OR (Sherwin-Williams) 
+
+ticker: SPG , company: Simon Property Group  ||||||||||| query = #SPG OR $SPG OR (Simon) 
+
+ticker: SWKS , company: Skyworks Solutions  ||||||||||| query = #SWKS OR $SWKS OR (Skyworks) 
+
+ticker: SNA , company: Snap-on  ||||||||||| query = #SNA OR $SNA OR (Snap-on) 
+
+ticker: SO , company: Southern Company  ||||||||||| query = #SO OR $SO OR (Southern) 
+
+ticker: LUV , company: Southwest Airlines  ||||||||||| query = #LUV OR $LUV OR (Southwest) 
+
+ticker: SWK , company: Stanley Black & Decker  ||||||||||| query = #SWK OR $SWK OR (Stanley) 
+
+ticker: SBUX , company: Starbucks  ||||||||||| query = #SBUX OR $SBUX OR (Starbucks) 
+
+ticker: STT , company: State Street Corporation  ||||||||||| query = #STT OR $STT OR (State) 
+
+ticker: STE , company: Steris  ||||||||||| query = #STE OR $STE OR (Steris) 
+
+ticker: SYK , company: Stryker Corporation  ||||||||||| query = #SYK OR $SYK OR (Stryker) 
+
+special case ................. 
+ ticker: SIVB , company: SVB Financial  ||||||||||| query = #SIVB OR $SIVB OR (SVB Financial) 
+
+ticker: SYF , company: Synchrony Financial  ||||||||||| query = #SYF OR $SYF OR (Synchrony) 
+
+ticker: SNPS , company: Synopsys  ||||||||||| query = #SNPS OR $SNPS OR (Synopsys) 
+
+ticker: SYY , company: Sysco  ||||||||||| query = #SYY OR $SYY OR (Sysco) 
+
+ticker: TMUS , company: T-Mobile US  ||||||||||| query = #TMUS OR $TMUS OR (T-Mobile) 
+
+special case ................. 
+ ticker: TROW , company: T. Rowe Price  ||||||||||| query = #TROW OR $TROW OR (T. Rowe Price) 
+
+ticker: TTWO , company: Take-Two Interactive  ||||||||||| query = #TTWO OR $TTWO OR (Take-Two) 
+
+ticker: TPR , company: Tapestry  ||||||||||| query = #TPR OR $TPR OR (Tapestry) 
+
+ticker: TGT , company: Target Corporation  ||||||||||| query = #TGT OR $TGT OR (Target) 
+
+special case ................. 
+ ticker: TEL , company: TE Connectivity  ||||||||||| query = #TEL OR $TEL OR (TE Connectivity) 
+
+ticker: TDY , company: Teledyne Technologies  ||||||||||| query = #TDY OR $TDY OR (Teledyne) 
+
+ticker: TFX , company: Teleflex  ||||||||||| query = #TFX OR $TFX OR (Teleflex) 
+
+ticker: TER , company: Teradyne  ||||||||||| query = #TER OR $TER OR (Teradyne) 
+
+ticker: TSLA , company: Tesla  ||||||||||| query = #TSLA OR $TSLA OR (Tesla) 
+
+ticker: TXN , company: Texas Instruments  ||||||||||| query = #TXN OR $TXN OR (Texas) 
+
+ticker: TXT , company: Textron  ||||||||||| query = #TXT OR $TXT OR (Textron) 
+
+ticker: TMO , company: Thermo Fisher Scientific  ||||||||||| query = #TMO OR $TMO OR (Thermo) 
+
+special case ................. 
+ ticker: TJX , company: TJX Companies  ||||||||||| query = #TJX OR $TJX OR (TJX Companies) 
+
+ticker: TSCO , company: Tractor Supply Company  ||||||||||| query = #TSCO OR $TSCO OR (Tractor) 
+
+ticker: TT , company: Trane Technologies  ||||||||||| query = #TT OR $TT OR (Trane) 
+
+ticker: TDG , company: TransDigm Group  ||||||||||| query = #TDG OR $TDG OR (TransDigm) 
+
+special case ................. 
+ ticker: TRV , company: The Travelers Companies  ||||||||||| query = #TRV OR $TRV OR (The Travelers Companies) 
+
+ticker: TRMB , company: Trimble  ||||||||||| query = #TRMB OR $TRMB OR (Trimble) 
+
+ticker: TFC , company: Truist Financial  ||||||||||| query = #TFC OR $TFC OR (Truist) 
+
+ticker: TWTR , company: Twitter  ||||||||||| query = #TWTR OR $TWTR OR (Twitter) 
+
+ticker: TYL , company: Tyler Technologies  ||||||||||| query = #TYL OR $TYL OR (Tyler) 
+
+ticker: TSN , company: Tyson Foods  ||||||||||| query = #TSN OR $TSN OR (Tyson) 
+
+special case ................. 
+ ticker: UDR , company: UDR  ||||||||||| query = #UDR OR $UDR OR (UDR) 
+
+ticker: ULTA , company: Ulta Beauty  ||||||||||| query = #ULTA OR $ULTA OR (Ulta) 
+
+ticker: USB , company: U.S. Bancorp  ||||||||||| query = #USB OR $USB OR (U.S.) 
+
+ticker: UAA , company: Under Armour (Class A)  ||||||||||| query = #UAA OR $UAA OR (Under) 
+
+ticker: UA , company: Under Armour (Class C)  ||||||||||| query = #UA OR $UA OR (Under) 
+
+ticker: UNP , company: Union Pacific  ||||||||||| query = #UNP OR $UNP OR (Union) 
+
+ticker: UAL , company: United Airlines  ||||||||||| query = #UAL OR $UAL OR (United) 
+
+ticker: UNH , company: UnitedHealth Group  ||||||||||| query = #UNH OR $UNH OR (UnitedHealth) 
+
+ticker: UPS , company: United Parcel Service  ||||||||||| query = #UPS OR $UPS OR (United) 
+
+ticker: URI , company: United Rentals  ||||||||||| query = #URI OR $URI OR (United) 
+
+ticker: UHS , company: Universal Health Services  ||||||||||| query = #UHS OR $UHS OR (Universal) 
+
+ticker: VLO , company: Valero Energy  ||||||||||| query = #VLO OR $VLO OR (Valero) 
+
+ticker: VTR , company: Ventas  ||||||||||| query = #VTR OR $VTR OR (Ventas) 
+
+ticker: VRSN , company: Verisign  ||||||||||| query = #VRSN OR $VRSN OR (Verisign) 
+
+ticker: VRSK , company: Verisk Analytics  ||||||||||| query = #VRSK OR $VRSK OR (Verisk) 
+
+ticker: VZ , company: Verizon Communications  ||||||||||| query = #VZ OR $VZ OR (Verizon) 
+
+ticker: VRTX , company: Vertex Pharmaceuticals  ||||||||||| query = #VRTX OR $VRTX OR (Vertex) 
+
+special case ................. 
+ ticker: VFC , company: VF Corporation  ||||||||||| query = #VFC OR $VFC OR (VF Corporation) 
+
+ticker: VIAC , company: ViacomCBS  ||||||||||| query = #VIAC OR $VIAC OR (ViacomCBS) 
+
+ticker: VTRS , company: Viatris  ||||||||||| query = #VTRS OR $VTRS OR (Viatris) 
+
+ticker: V , company: Visa  ||||||||||| query = #V OR $V OR (Visa) 
+
+ticker: VNO , company: Vornado Realty Trust  ||||||||||| query = #VNO OR $VNO OR (Vornado) 
+
+ticker: VMC , company: Vulcan Materials  ||||||||||| query = #VMC OR $VMC OR (Vulcan) 
+
+special case ................. 
+ ticker: WRB , company: W. R. Berkley Corporation  ||||||||||| query = #WRB OR $WRB OR (W. R. Berkley Corporation) 
+
+ticker: WAB , company: Wabtec  ||||||||||| query = #WAB OR $WAB OR (Wabtec) 
+
+ticker: WMT , company: Walmart  ||||||||||| query = #WMT OR $WMT OR (Walmart) 
+
+ticker: WBA , company: Walgreens Boots Alliance  ||||||||||| query = #WBA OR $WBA OR (Walgreens) 
+
+special case ................. 
+ ticker: DIS , company: The Walt Disney Company  ||||||||||| query = #DIS OR $DIS OR (The Walt Disney Company) 
+
+ticker: WM , company: Waste Management  ||||||||||| query = #WM OR $WM OR (Waste) 
+
+ticker: WAT , company: Waters Corporation  ||||||||||| query = #WAT OR $WAT OR (Waters) 
+
+special case ................. 
+ ticker: WEC , company: WEC Energy Group  ||||||||||| query = #WEC OR $WEC OR (WEC Energy Group) 
+
+ticker: WFC , company: Wells Fargo  ||||||||||| query = #WFC OR $WFC OR (Wells) 
+
+ticker: WELL , company: Welltower  ||||||||||| query = #WELL OR $WELL OR (Welltower) 
+
+ticker: WST , company: West Pharmaceutical Services  ||||||||||| query = #WST OR $WST OR (West) 
+
+ticker: WDC , company: Western Digital  ||||||||||| query = #WDC OR $WDC OR (Western) 
+
+ticker: WU , company: Western Union  ||||||||||| query = #WU OR $WU OR (Western) 
+
+ticker: WRK , company: WestRock  ||||||||||| query = #WRK OR $WRK OR (WestRock) 
+
+ticker: WY , company: Weyerhaeuser  ||||||||||| query = #WY OR $WY OR (Weyerhaeuser) 
+
+ticker: WHR , company: Whirlpool Corporation  ||||||||||| query = #WHR OR $WHR OR (Whirlpool) 
+
+ticker: WMB , company: Williams Companies  ||||||||||| query = #WMB OR $WMB OR (Williams) 
+
+ticker: WLTW , company: Willis Towers Watson  ||||||||||| query = #WLTW OR $WLTW OR (Willis) 
+
+ticker: WYNN , company: Wynn Resorts  ||||||||||| query = #WYNN OR $WYNN OR (Wynn) 
+
+ticker: XEL , company: Xcel Energy  ||||||||||| query = #XEL OR $XEL OR (Xcel) 
+
+ticker: XLNX , company: Xilinx  ||||||||||| query = #XLNX OR $XLNX OR (Xilinx) 
+
+ticker: XYL , company: Xylem  ||||||||||| query = #XYL OR $XYL OR (Xylem) 
+
+ticker: YUM , company: Yum! Brands  ||||||||||| query = #YUM OR $YUM OR (Yum!) 
+
+ticker: ZBRA , company: Zebra Technologies  ||||||||||| query = #ZBRA OR $ZBRA OR (Zebra) 
+
+ticker: ZBH , company: Zimmer Biomet  ||||||||||| query = #ZBH OR $ZBH OR (Zimmer) 
+
+ticker: ZION , company: Zions Bancorp  ||||||||||| query = #ZION OR $ZION OR (Zions) 
+
+ticker: ZTS , company: Zoetis  ||||||||||| query = #ZTS OR $ZTS OR (Zoetis) 
+
