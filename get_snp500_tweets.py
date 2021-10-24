@@ -9,6 +9,7 @@ def main():
     snp500_df = pd.read_csv("data\Stock_indices\snp500_list.csv")
     #print(snp500_df.head())
     query_file = open('query_file.txt', 'w')
+    savenames = []
     for i in range(len(snp500_df)):
         #print("ticker ", snp500_df['Symbol'].iloc[i], " company ", snp500_df['Security'].iloc[i])
         ticker = snp500_df['Symbol'].iloc[i]
@@ -20,7 +21,13 @@ def main():
         if len(name[0])<=3 :
             query_file.write("special case ................. \n ")
             name_to_use = ' '.join(name)
-        out_string = "ticker: {t} , company: {n}  ||||||||||| query = {tick} OR ({c}) \n\n".format(t=ticker, tick=ticker_to_use, c=name_to_use, n=' '.join(name))
+        outputfilename = ''.join(name)
+        if outputfilename not in savenames:
+            savenames.append(outputfilename)
+        else:
+            query_file.write(outputfilename+ ' POSSIBLE duplicate')
+            print(outputfilename + " DUPLICATE")
+        out_string = "ticker: {t} , company: {n}  \n||||||||||| query = {tick} OR ({c}) \t saveName= df_{o}.csv \n\n".format(t=ticker, tick=ticker_to_use, c=name_to_use, n=' '.join(name), o=outputfilename)
         query_file.write(out_string)
     # query = 'aapl OR Apple'         # now define number of total tweets you want, should be greater than max_results_per_query
     # number_of_tweets = 500  # now define output file name
