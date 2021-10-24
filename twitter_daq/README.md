@@ -11,7 +11,7 @@ To do :
 Keys are stored in config.py\
 Format:\
 td ameritrade key \
-ameritrade_key = 'XXXXXXXXXXXXXXXXX'\
+ameritrade_key = 'XXXXXXXXXXXXXXXXX'
 
 twitter_stuff
 class twitter_key:\
@@ -29,4 +29,4 @@ class twitter_daq:\
         CONSUMER_SECRET    = "XXXXXXXXXXXXXXXXX"\
         ACCESS_TOKEN_KEY   = "XXXXXXXXXXXXXXXXX"'\
         ACCESS_TOKEN_SECRET= "XXXXXXXXXXXXXXXXX"\
-        BEARER_TOKEN       = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"\
+        BEARER_TOKEN       = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
