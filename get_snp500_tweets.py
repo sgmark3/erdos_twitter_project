@@ -12,6 +12,7 @@ def main():
     savenames = []
     for i in range(len(snp500_df)):
         #print("ticker ", snp500_df['Symbol'].iloc[i], " company ", snp500_df['Security'].iloc[i])
+        if i > 10 : continue
         ticker = snp500_df['Symbol'].iloc[i]
         name = snp500_df['Security'].iloc[i].split(' ')
         name_to_use = name[0]
@@ -29,11 +30,11 @@ def main():
             print(outputfilename + " DUPLICATE")
         out_string = "ticker: {t} , company: {n}  \n||||||||||| query = {tick} OR ({c}) \t saveName= df_{o}.csv \n\n".format(t=ticker, tick=ticker_to_use, c=name_to_use, n=' '.join(name), o=outputfilename)
         query_file.write(out_string)
-    # query = 'aapl OR Apple'         # now define number of total tweets you want, should be greater than max_results_per_query
-    # number_of_tweets = 500  # now define output file name
-    # filename = 'df_'+query
-    # print(query, number_of_tweets, filename)
-    #get_twitter_data(query=query, numtweets=number_of_tweets, output_file=filename)
+        query = ticker_to_use+ " OR "+ name_to_use         # now define number of total tweets you want, should be greater than max_results_per_query
+        number_of_tweets = 10000  # now define output file name
+        filename = 'df_'+outputfilename
+        print(query, number_of_tweets, filename)
+        get_twitter_data(query=query, numtweets=number_of_tweets, output_file=filename)
     query_file.close()
 
 if __name__ == "__main__":
