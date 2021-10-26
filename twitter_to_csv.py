@@ -13,7 +13,7 @@ max_results_per_query = 200  # maximum requests per query, minimum is 10, maximu
 #  https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all
 
 
-def get_fullarchive_tweets(query='', end_date='2021-01-01T05:00:00Z', next_token=None, filename='stock'):
+def get_fullarchive_tweets(query='', end_date='2021-10-01T00:00:00Z', next_token=None, filename='stock'):
     """
     This function takes in a search term query and creates a csv file with json response from twitter
     """
@@ -21,7 +21,7 @@ def get_fullarchive_tweets(query='', end_date='2021-01-01T05:00:00Z', next_token
     # https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
     # https://developer.twitter.com/en/docs/twitter-api/v1/rules-and-filtering/search-operators
     print("query = ", query)
-    query_params = {'query': query+' lang:en -is:retweet -is:reply -RT', 
+    query_params = {'query': '#MMM OR $MMM OR (3M) -is:retweet -is:reply -RT lang:en', 
                     'tweet.fields': 'attachments,author_id,created_at,entities,id,in_reply_to_user_id,public_metrics,possibly_sensitive,referenced_tweets,source,text,withheld',
                     'expansions' :'attachments.media_keys,author_id,in_reply_to_user_id,entities.mentions.username,referenced_tweets.id,referenced_tweets.id.author_id', 
                     'user.fields':'created_at,id,location,entities,name,pinned_tweet_id,profile_image_url,public_metrics,url,username,withheld', 
@@ -38,9 +38,10 @@ def get_fullarchive_tweets(query='', end_date='2021-01-01T05:00:00Z', next_token
     if response.status_code != 200:
         raise Exception(response.status_code, response.text)
     json_response = response.json()
-    # with open('sample.json', 'w') as f:
-    #     json.dump(json_response, f, sort_keys = True, indent = 4)
+    with open('sample.json', 'w') as f:
+        json.dump(json_response, f, sort_keys = True, indent = 4)
     json_to_csv(json_response, filename)
+    sleep(1)
     return json_response["meta"]
 
 def get_twitter_data(query='', numtweets=500, output_file=''):
@@ -63,9 +64,9 @@ def main():
     # https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
     query = "#MMM OR $MMM OR MMM OR (3M)"
     # now define number of total tweets you want, should be greater than max_results_per_query
-    number_of_tweets = 30
+    number_of_tweets = 500
     # now define output file name
-    filename = 'df_'+query
+    filename = 'df_'+'MMM'
     get_twitter_data(query=query, numtweets=number_of_tweets, output_file=filename)
 
 
