@@ -42,7 +42,8 @@ if not os.path.exists(cache_dir):
 @checkpoint(key=lambda args, kwargs: quote(args[0]+'_'+args[1]) + '.pkl', work_dir=cache_dir)
 @retry
 def load_data(symbol,month):
-    CSV_URL = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY_EXTENDED&symbol='+    symbol + '&interval=1min&slice='+    month+'&apikey='+API_key
+    CSV_URL = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY_EXTENDED&symbol='+\
+    symbol+'&interval=1min&slice='+month+'&apikey='+API_key
     with requests.Session() as s:
         download = s.get(CSV_URL)
         decoded_content = download.content.decode('utf-8')
