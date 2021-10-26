@@ -77,7 +77,7 @@ def aggregate(symbol):
         if filename.startswith(f'{symbol}_') and filename.endswith('.pkl'):
             df = pd.concat([df,pd.read_pickle(local_path+'/cache/'+filename)])
             #print(len(df),filename) 
-            # uncomment this if you want some output just so that the code is running as expected
+            # uncomment the above line if you want some output just so that you know the code is running as expected
             os.remove(local_path+'/cache/'+filename)
             
         df.to_csv(local_path+'/cache/'+f'{symbol}.csv',index=False)
