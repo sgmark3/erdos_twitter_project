@@ -30,6 +30,8 @@ local_path = os.fsdecode(cmd_out).strip()
 
 # In[8]:
 
+# run the following command on your terminal in the beginning before running this script:
+# export API_key="your api_key goes here"
 
 API_key=os.getenv('API_key')
 
