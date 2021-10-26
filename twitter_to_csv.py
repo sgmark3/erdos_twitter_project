@@ -19,7 +19,9 @@ def get_fullarchive_tweets(query='', end_date='2021-01-01T05:00:00Z', next_token
     """
     # Details on query can be found here
     # https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
-    query_params = {'query': query+' lang:en -is:retweet', 
+    # https://developer.twitter.com/en/docs/twitter-api/v1/rules-and-filtering/search-operators
+    print("query = ", query)
+    query_params = {'query': query+' lang:en -is:retweet -is:reply -RT', 
                     'tweet.fields': 'attachments,author_id,created_at,entities,id,in_reply_to_user_id,public_metrics,possibly_sensitive,referenced_tweets,source,text,withheld',
                     'expansions' :'attachments.media_keys,author_id,in_reply_to_user_id,entities.mentions.username,referenced_tweets.id,referenced_tweets.id.author_id', 
                     'user.fields':'created_at,id,location,entities,name,pinned_tweet_id,profile_image_url,public_metrics,url,username,withheld', 

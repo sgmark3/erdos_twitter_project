@@ -1,3 +1,10 @@
+special case ................. 
+ ticker: MMM , company: 3M  
+||||||||||| query = #MMM OR $MMM OR MMM OR (3M) 	 saveName= df_3M.csv 
+
+ticker: ABT , company: Abbott Laboratories  
+||||||||||| query = #ABT OR $ABT OR ABT OR (Abbott) 	 saveName= df_AbbottLaboratories.csv 
+
 ticker: ABBV , company: AbbVie  
 ||||||||||| query = #ABBV OR $ABBV OR ABBV OR (AbbVie) 	 saveName= df_AbbVie.csv 
 

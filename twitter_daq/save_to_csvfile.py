@@ -78,8 +78,10 @@ def save_to_csv(data, output_name=None):
 def json_to_csv(data, output_name=None):
     tweet_data = data['data']              # this is tweet data
     user_data  = data['includes']['users'] # this is user data
-    media_data = data['includes']['media'] # this is media data
-
+    if 'media' in data['includes']:
+        media_data = data['includes']['media'] # this is media data
+    else:
+        media_data = {}
     # first get flattened dictionary
     tweet_data_unfolded = []
     for data in tweet_data:
@@ -97,13 +99,15 @@ def json_to_csv(data, output_name=None):
     tweet_df = pd.DataFrame.from_dict(tweet_data_unfolded)
     tweet_df.rename(columns={"id": "tweet_id"}, inplace=True)
     tweet_df.rename(columns={"attachments_media_keys": "media_key"}, inplace=True)
-    tweet_df["media_key"] = tweet_df["media_key"].apply(lambda x: str(x[0]) if isinstance(x, list) else ' ' )
+    if "media_key" in tweet_df:
+        tweet_df["media_key"] = tweet_df["media_key"].apply(lambda x: str(x[0]) if isinstance(x, list) else ' ' )
 
     user_df = pd.DataFrame.from_dict(user_unfolded)
     user_df.rename(columns={"id": "author_id"}, inplace=True)
     media_df = pd.DataFrame.from_dict(media_unfoldeded)
-    media_df["media_key"] = media_df["media_key"].apply(lambda x: str(x) )
-    media_df.rename(columns={"type": "media_type"}, inplace=True)
+    if "media_key" in media_df:
+        media_df["media_key"] = media_df["media_key"].apply(lambda x: str(x) )
+        media_df.rename(columns={"type": "media_type"}, inplace=True)
 
     # tweet_df.to_csv('data/Tweets_Raw/tweet_df.csv', index=False)
     # user_df.to_csv('data/Tweets_Raw/user_df.csv', index=False)
@@ -111,7 +115,8 @@ def json_to_csv(data, output_name=None):
 
     ## now merge tweets with corresponding user parameters
     result_df = tweet_df.merge(user_df, how='left', on='author_id', suffixes=('', '_user'))
-    result_df = result_df.merge(media_df, how='left', on='media_key', suffixes=('', '_media'))
+    if  "media_key" in media_df:
+        result_df = result_df.merge(media_df, how='left', on='media_key', suffixes=('', '_media'))
     for col in ['created_at', 'created_at_user']:
         result_df[col] = result_df[col].apply(lambda x: datetime.strptime(x, fmt) ) 
         result_df[col] = result_df[col].dt.tz_localize('UTC')
