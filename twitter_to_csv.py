@@ -21,18 +21,19 @@ def get_fullarchive_tweets(query='', end_date='2021-10-01T00:00:00Z', next_token
     # https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
     # https://developer.twitter.com/en/docs/twitter-api/v1/rules-and-filtering/search-operators
     print("query = ", query)
-    query_params = {'query': '#MMM OR $MMM OR (3M) -is:retweet -is:reply -RT lang:en', 
+    query_params = {'query': query + "-is:retweet -is:reply -RT lang:en", 
                     'tweet.fields': 'attachments,author_id,created_at,entities,id,in_reply_to_user_id,public_metrics,possibly_sensitive,referenced_tweets,source,text,withheld',
                     'expansions' :'attachments.media_keys,author_id,in_reply_to_user_id,entities.mentions.username,referenced_tweets.id,referenced_tweets.id.author_id', 
                     'user.fields':'created_at,id,location,entities,name,pinned_tweet_id,profile_image_url,public_metrics,url,username,withheld', 
                     'media.fields' : 'duration_ms,height,media_key,type,url,width,public_metrics,alt_text',
                     'max_results' : max_results_per_query,
-                    'end_time' : end_date
+                    'start_time' : '2019-10-01T00:00:00Z', 
+                    'end_time'    : '2021-10-01T00:00:00Z'
                      }                    
+    print(query + "-is:retweet -is:reply -RT lang:en")
 
     if next_token is not None:
         query_params['next_token'] = next_token 
-
     response = requests.get(search_url, auth=bearer_oauth, params=query_params)
     print(response.status_code)
     if response.status_code != 200:
