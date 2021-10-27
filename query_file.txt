@@ -1,0 +1,53 @@
+ticker: EXPD , company: Expeditors  
+||||||||||| query = #EXPD OR $EXPD OR EXPD OR (Expeditors) 	 saveName= df_Expeditors.csv 
+
+ticker: EXR , company: Extra Space Storage  
+||||||||||| query = #EXR OR $EXR OR EXR OR (Extra) 	 saveName= df_ExtraSpaceStorage.csv 
+
+ticker: XOM , company: ExxonMobil  
+||||||||||| query = #XOM OR $XOM OR XOM OR (ExxonMobil) 	 saveName= df_ExxonMobil.csv 
+
+special case ................. 
+ ticker: FFIV , company: F5 Networks  
+||||||||||| query = #FFIV OR $FFIV OR FFIV OR (F5 Networks) 	 saveName= df_F5Networks.csv 
+
+ticker: FB , company: Facebook  
+||||||||||| query = #FB OR $FB OR (Facebook) 	 saveName= df_Facebook.csv 
+
+ticker: FAST , company: Fastenal  
+||||||||||| query = #FAST OR $FAST OR FAST OR (Fastenal) 	 saveName= df_Fastenal.csv 
+
+ticker: FRT , company: Federal Realty Investment Trust  
+||||||||||| query = #FRT OR $FRT OR FRT OR (Federal) 	 saveName= df_FederalRealtyInvestmentTrust.csv 
+
+ticker: FDX , company: FedEx  
+||||||||||| query = #FDX OR $FDX OR FDX OR (FedEx) 	 saveName= df_FedEx.csv 
+
+ticker: FIS , company: Fidelity National Information Services  
+||||||||||| query = #FIS OR $FIS OR FIS OR (Fidelity) 	 saveName= df_FidelityNationalInformationServices.csv 
+
+ticker: FITB , company: Fifth Third Bancorp  
+||||||||||| query = #FITB OR $FITB OR FITB OR (Fifth) 	 saveName= df_FifthThirdBancorp.csv 
+
+ticker: FE , company: FirstEnergy  
+||||||||||| query = #FE OR $FE OR (FirstEnergy) 	 saveName= df_FirstEnergy.csv 
+
+ticker: FRC , company: First Republic Bank  
+||||||||||| query = #FRC OR $FRC OR FRC OR (First) 	 saveName= df_FirstRepublicBank.csv 
+
+ticker: FISV , company: Fiserv  
+||||||||||| query = #FISV OR $FISV OR FISV OR (Fiserv) 	 saveName= df_Fiserv.csv 
+
+ticker: FLT , company: Fleetcor  
+||||||||||| query = #FLT OR $FLT OR FLT OR (Fleetcor) 	 saveName= df_Fleetcor.csv 
+
+special case ................. 
+ ticker: FMC , company: FMC Corporation  
+||||||||||| query = #FMC OR $FMC OR FMC OR (FMC Corporation) 	 saveName= df_FMCCorporation.csv 
+
+ticker: F , company: Ford  
+||||||||||| query = #F OR $F OR (Ford) 	 saveName= df_Ford.csv 
+
+ticker: FTNT , company: Fortinet  
+||||||||||| query = #FTNT OR $FTNT OR FTNT OR (Fortinet) 	 saveName= df_Fortinet.csv 
+
