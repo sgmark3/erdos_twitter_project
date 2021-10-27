@@ -20,7 +20,7 @@ def get_fullarchive_tweets(query='', end_date='2021-10-01T00:00:00Z', next_token
     # Details on query can be found here
     # https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
     # https://developer.twitter.com/en/docs/twitter-api/v1/rules-and-filtering/search-operators
-    print("query = ", query)
+    #print("query = ", query)
     query_params = {'query': query + "-is:retweet -is:reply -RT lang:en", 
                     'tweet.fields': 'attachments,author_id,created_at,entities,id,in_reply_to_user_id,public_metrics,possibly_sensitive,referenced_tweets,source,text,withheld',
                     'expansions' :'attachments.media_keys,author_id,in_reply_to_user_id,entities.mentions.username,referenced_tweets.id,referenced_tweets.id.author_id', 
@@ -39,8 +39,8 @@ def get_fullarchive_tweets(query='', end_date='2021-10-01T00:00:00Z', next_token
     if response.status_code != 200:
         raise Exception(response.status_code, response.text)
     json_response = response.json()
-    with open('sample.json', 'w') as f:
-        json.dump(json_response, f, sort_keys = True, indent = 4)
+    # with open('sample.json', 'w') as f:
+    #     json.dump(json_response, f, sort_keys = True, indent = 4)
     json_to_csv(json_response, filename)
     sleep(1)
     return json_response["meta"]
@@ -49,7 +49,7 @@ def get_twitter_data(query='', numtweets=500, output_file=''):
     next_token = None
     for n in range(int(numtweets/max_results_per_query)):
         output = get_fullarchive_tweets(query=query, next_token=next_token, filename=output_file )
-        print(output)
+        #print(output)
         if 'next_token' in output : 
             next_token = output['next_token']
         else:   
