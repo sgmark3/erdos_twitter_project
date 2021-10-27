@@ -1,0 +1,198 @@
+ticker: ADBE , company: Adobe  
+||||||||||| query = #ADBE OR $ADBE OR ADBE OR (Adobe) 	 saveName= df_Adobe.csv 
+
+ticker: AMD , company: Advanced Micro Devices  
+||||||||||| query = #AMD OR $AMD OR AMD OR (Advanced) 	 saveName= df_AdvancedMicroDevices.csv 
+
+ticker: AAP , company: Advance Auto Parts  
+||||||||||| query = #AAP OR $AAP OR AAP OR (Advance) 	 saveName= df_AdvanceAutoParts.csv 
+
+special case ................. 
+ ticker: AES , company: AES Corp  
+||||||||||| query = #AES OR $AES OR AES OR (AES Corp) 	 saveName= df_AESCorp.csv 
+
+ticker: AFL , company: Aflac  
+||||||||||| query = #AFL OR $AFL OR AFL OR (Aflac) 	 saveName= df_Aflac.csv 
+
+ticker: A , company: Agilent Technologies  
+||||||||||| query = #A OR $A OR (Agilent) 	 saveName= df_AgilentTechnologies.csv 
+
+special case ................. 
+ ticker: APD , company: Air Products & Chemicals  
+||||||||||| query = #APD OR $APD OR APD OR (Air Products & Chemicals) 	 saveName= df_AirProducts&Chemicals.csv 
+
+ticker: AKAM , company: Akamai Technologies  
+||||||||||| query = #AKAM OR $AKAM OR AKAM OR (Akamai) 	 saveName= df_AkamaiTechnologies.csv 
+
+ticker: ALK , company: Alaska Air Group  
+||||||||||| query = #ALK OR $ALK OR ALK OR (Alaska) 	 saveName= df_AlaskaAirGroup.csv 
+
+ticker: ALB , company: Albemarle Corporation  
+||||||||||| query = #ALB OR $ALB OR ALB OR (Albemarle) 	 saveName= df_AlbemarleCorporation.csv 
+
+ticker: ARE , company: Alexandria Real Estate Equities  
+||||||||||| query = #ARE OR $ARE OR ARE OR (Alexandria) 	 saveName= df_AlexandriaRealEstateEquities.csv 
+
+ticker: ALGN , company: Align Technology  
+||||||||||| query = #ALGN OR $ALGN OR ALGN OR (Align) 	 saveName= df_AlignTechnology.csv 
+
+ticker: ALLE , company: Allegion  
+||||||||||| query = #ALLE OR $ALLE OR ALLE OR (Allegion) 	 saveName= df_Allegion.csv 
+
+ticker: LNT , company: Alliant Energy  
+||||||||||| query = #LNT OR $LNT OR LNT OR (Alliant) 	 saveName= df_AlliantEnergy.csv 
+
+ticker: ALL , company: Allstate Corp  
+||||||||||| query = #ALL OR $ALL OR ALL OR (Allstate) 	 saveName= df_AllstateCorp.csv 
+
+ticker: GOOGL , company: Alphabet (Class A)  
+||||||||||| query = #GOOGL OR $GOOGL OR GOOGL OR (Alphabet) 	 saveName= df_Alphabet(ClassA).csv 
+
+ticker: GOOG , company: Alphabet (Class C)  
+||||||||||| query = #GOOG OR $GOOG OR GOOG OR (Alphabet) 	 saveName= df_Alphabet(ClassC).csv 
+
+ticker: MO , company: Altria Group  
+||||||||||| query = #MO OR $MO OR (Altria) 	 saveName= df_AltriaGroup.csv 
+
+ticker: AMZN , company: Amazon  
+||||||||||| query = #AMZN OR $AMZN OR AMZN OR (Amazon) 	 saveName= df_Amazon.csv 
+
+ticker: AMCR , company: Amcor  
+||||||||||| query = #AMCR OR $AMCR OR AMCR OR (Amcor) 	 saveName= df_Amcor.csv 
+
+ticker: AEE , company: Ameren Corp  
+||||||||||| query = #AEE OR $AEE OR AEE OR (Ameren) 	 saveName= df_AmerenCorp.csv 
+
+ticker: AAL , company: American Airlines Group  
+||||||||||| query = #AAL OR $AAL OR AAL OR (American) 	 saveName= df_AmericanAirlinesGroup.csv 
+
+ticker: AEP , company: American Electric Power  
+||||||||||| query = #AEP OR $AEP OR AEP OR (American) 	 saveName= df_AmericanElectricPower.csv 
+
+ticker: AXP , company: American Express  
+||||||||||| query = #AXP OR $AXP OR AXP OR (American) 	 saveName= df_AmericanExpress.csv 
+
+ticker: AIG , company: American International Group  
+||||||||||| query = #AIG OR $AIG OR AIG OR (American) 	 saveName= df_AmericanInternationalGroup.csv 
+
+ticker: AMT , company: American Tower  
+||||||||||| query = #AMT OR $AMT OR AMT OR (American) 	 saveName= df_AmericanTower.csv 
+
+ticker: AWK , company: American Water Works  
+||||||||||| query = #AWK OR $AWK OR AWK OR (American) 	 saveName= df_AmericanWaterWorks.csv 
+
+ticker: AMP , company: Ameriprise Financial  
+||||||||||| query = #AMP OR $AMP OR AMP OR (Ameriprise) 	 saveName= df_AmeripriseFinancial.csv 
+
+ticker: ABC , company: AmerisourceBergen  
+||||||||||| query = #ABC OR $ABC OR ABC OR (AmerisourceBergen) 	 saveName= df_AmerisourceBergen.csv 
+
+ticker: AME , company: Ametek  
+||||||||||| query = #AME OR $AME OR AME OR (Ametek) 	 saveName= df_Ametek.csv 
+
+ticker: AMGN , company: Amgen  
+||||||||||| query = #AMGN OR $AMGN OR AMGN OR (Amgen) 	 saveName= df_Amgen.csv 
+
+ticker: APH , company: Amphenol  
+||||||||||| query = #APH OR $APH OR APH OR (Amphenol) 	 saveName= df_Amphenol.csv 
+
+ticker: ADI , company: Analog Devices  
+||||||||||| query = #ADI OR $ADI OR ADI OR (Analog) 	 saveName= df_AnalogDevices.csv 
+
+ticker: ANSS , company: Ansys  
+||||||||||| query = #ANSS OR $ANSS OR ANSS OR (Ansys) 	 saveName= df_Ansys.csv 
+
+ticker: ANTM , company: Anthem  
+||||||||||| query = #ANTM OR $ANTM OR ANTM OR (Anthem) 	 saveName= df_Anthem.csv 
+
+special case ................. 
+ ticker: AON , company: Aon  
+||||||||||| query = #AON OR $AON OR AON OR (Aon) 	 saveName= df_Aon.csv 
+
+special case ................. 
+ ticker: AOS , company: A. O. Smith  
+||||||||||| query = #AOS OR $AOS OR AOS OR (A. O. Smith) 	 saveName= df_A.O.Smith.csv 
+
+special case ................. 
+ ticker: APA , company: APA Corporation  
+||||||||||| query = #APA OR $APA OR APA OR (APA Corporation) 	 saveName= df_APACorporation.csv 
+
+ticker: AAPL , company: Apple  
+||||||||||| query = #AAPL OR $AAPL OR AAPL OR (Apple) 	 saveName= df_Apple.csv 
+
+ticker: AMAT , company: Applied Materials  
+||||||||||| query = #AMAT OR $AMAT OR AMAT OR (Applied) 	 saveName= df_AppliedMaterials.csv 
+
+ticker: APTV , company: Aptiv  
+||||||||||| query = #APTV OR $APTV OR APTV OR (Aptiv) 	 saveName= df_Aptiv.csv 
+
+special case ................. 
+ ticker: ADM , company: ADM  
+||||||||||| query = #ADM OR $ADM OR ADM OR (ADM) 	 saveName= df_ADM.csv 
+
+ticker: ANET , company: Arista Networks  
+||||||||||| query = #ANET OR $ANET OR ANET OR (Arista) 	 saveName= df_AristaNetworks.csv 
+
+ticker: AJG , company: Arthur J. Gallagher & Co.  
+||||||||||| query = #AJG OR $AJG OR AJG OR (Arthur) 	 saveName= df_ArthurJ.Gallagher&Co..csv 
+
+ticker: AIZ , company: Assurant  
+||||||||||| query = #AIZ OR $AIZ OR AIZ OR (Assurant) 	 saveName= df_Assurant.csv 
+
+ticker: T , company: AT&T  
+||||||||||| query = #T OR $T OR (AT&T) 	 saveName= df_AT&T.csv 
+
+ticker: ATO , company: Atmos Energy  
+||||||||||| query = #ATO OR $ATO OR ATO OR (Atmos) 	 saveName= df_AtmosEnergy.csv 
+
+ticker: ADSK , company: Autodesk  
+||||||||||| query = #ADSK OR $ADSK OR ADSK OR (Autodesk) 	 saveName= df_Autodesk.csv 
+
+ticker: ADP , company: Automatic Data Processing  
+||||||||||| query = #ADP OR $ADP OR ADP OR (Automatic) 	 saveName= df_AutomaticDataProcessing.csv 
+
+ticker: AZO , company: AutoZone  
+||||||||||| query = #AZO OR $AZO OR AZO OR (AutoZone) 	 saveName= df_AutoZone.csv 
+
+ticker: AVB , company: AvalonBay Communities  
+||||||||||| query = #AVB OR $AVB OR AVB OR (AvalonBay) 	 saveName= df_AvalonBayCommunities.csv 
+
+ticker: AVY , company: Avery Dennison  
+||||||||||| query = #AVY OR $AVY OR AVY OR (Avery) 	 saveName= df_AveryDennison.csv 
+
+ticker: BKR , company: Baker Hughes  
+||||||||||| query = #BKR OR $BKR OR BKR OR (Baker) 	 saveName= df_BakerHughes.csv 
+
+ticker: BLL , company: Ball Corp  
+||||||||||| query = #BLL OR $BLL OR BLL OR (Ball) 	 saveName= df_BallCorp.csv 
+
+ticker: BAC , company: Bank of America  
+||||||||||| query = #BAC OR $BAC OR BAC OR (Bank) 	 saveName= df_BankofAmerica.csv 
+
+ticker: BBWI , company: Bath & Body Works, Inc.  
+||||||||||| query = #BBWI OR $BBWI OR BBWI OR (Bath) 	 saveName= df_Bath&BodyWorks,Inc..csv 
+
+ticker: BAX , company: Baxter International  
+||||||||||| query = #BAX OR $BAX OR BAX OR (Baxter) 	 saveName= df_BaxterInternational.csv 
+
+ticker: BDX , company: Becton Dickinson  
+||||||||||| query = #BDX OR $BDX OR BDX OR (Becton) 	 saveName= df_BectonDickinson.csv 
+
+ticker: BRK.B , company: Berkshire Hathaway  
+||||||||||| query = #BRK.B OR $BRK.B OR BRK.B OR (Berkshire) 	 saveName= df_BerkshireHathaway.csv 
+
+ticker: BBY , company: Best Buy  
+||||||||||| query = #BBY OR $BBY OR BBY OR (Best) 	 saveName= df_BestBuy.csv 
+
+ticker: BIO , company: Bio-Rad Laboratories  
+||||||||||| query = #BIO OR $BIO OR BIO OR (Bio-Rad) 	 saveName= df_Bio-RadLaboratories.csv 
+
+ticker: TECH , company: Bio-Techne  
+||||||||||| query = #TECH OR $TECH OR TECH OR (Bio-Techne) 	 saveName= df_Bio-Techne.csv 
+
+ticker: BIIB , company: Biogen  
+||||||||||| query = #BIIB OR $BIIB OR BIIB OR (Biogen) 	 saveName= df_Biogen.csv 
+
+ticker: BLK , company: BlackRock  
+||||||||||| query = #BLK OR $BLK OR BLK OR (BlackRock) 	 saveName= df_BlackRock.csv 
+
