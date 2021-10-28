@@ -75,13 +75,14 @@ def aggregate(symbol):
     for file in os.listdir(directory):
         filename = os.fsdecode(file)
         if filename.startswith(f'{symbol}_') and filename.endswith('.pkl'):
+            if '_year1month2.pkl' in filename : continue  # we need to skip this file to avoid double counting
             df = pd.concat([df,pd.read_pickle(local_path+'/cache/'+filename)])
             #print(len(df),filename) 
             # uncomment the above line if you want some output just so that you know the code is running as expected
             os.remove(local_path+'/cache/'+filename)
             
         df.to_csv(local_path+'/cache/'+f'{symbol}.csv',index=False)
-        
+    os.remove(local_path+"cache/"+symbol+'_year1month2.pkl') 
     return None  
 
 
