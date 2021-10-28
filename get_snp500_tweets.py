@@ -13,7 +13,7 @@ def main():
     savenames = []
     for i in range(len(snp500_df)):
         #print("ticker ", snp500_df['Symbol'].iloc[i], " company ", snp500_df['Security'].iloc[i])
-        if i < 387 : continue
+        if i < 456 : continue
         ticker = snp500_df['Symbol'].iloc[i]
         name = snp500_df['Security'].iloc[i].split(' ')
         name_to_use = name[0]

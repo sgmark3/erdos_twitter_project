@@ -50,6 +50,7 @@ def save_to_csv(data, output_name=None):
     and saves tweet, user parameters into output_name.csv
     json_to_csv() is the improved version
     '''
+    if 'data' not in data: return
     tweet_data = data['data']
     user_data  = data['includes']['users']
 
@@ -76,6 +77,7 @@ def save_to_csv(data, output_name=None):
 
 
 def json_to_csv(data, output_name=None):
+    if 'data' not in data: return
     tweet_data = data['data']              # this is tweet data
     user_data  = data['includes']['users'] # this is user data
     if 'media' in data['includes']:
