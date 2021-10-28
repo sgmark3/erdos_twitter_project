@@ -13,7 +13,7 @@ def main():
     savenames = []
     for i in range(len(snp500_df)):
         #print("ticker ", snp500_df['Symbol'].iloc[i], " company ", snp500_df['Security'].iloc[i])
-        if i < 202 : continue
+        if i < 299 : continue
         ticker = snp500_df['Symbol'].iloc[i]
         name = snp500_df['Security'].iloc[i].split(' ')
         name_to_use = name[0]
@@ -36,7 +36,7 @@ def main():
         query = """"{}" """.format(' '.join(name))
         number_of_tweets = 19000  # now define output file name
         filename = 'df_'+outputfilename
-        print(query, number_of_tweets, filename)
+        print(i, " : ", query, number_of_tweets, filename)
         get_twitter_data(query=query, numtweets=number_of_tweets, output_file=filename)
         sleep(1)
     query_file.close()
