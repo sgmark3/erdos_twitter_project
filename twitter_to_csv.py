@@ -13,7 +13,7 @@ max_results_per_query = 200  # maximum requests per query, minimum is 10, maximu
 #  https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all
 
 
-def get_fullarchive_tweets(query='', end_date='2021-10-01T00:00:00Z', next_token=None, filename='stock'):
+def get_fullarchive_tweets(query='', start_date='2019-10-01T00:00:00Z' ,end_date='2021-10-01T00:00:00Z', next_token=None, filename='stock'):
     """
     This function takes in a search term query and creates a csv file with json response from twitter
     """
@@ -27,8 +27,8 @@ def get_fullarchive_tweets(query='', end_date='2021-10-01T00:00:00Z', next_token
                     'user.fields':'created_at,id,location,entities,name,pinned_tweet_id,profile_image_url,public_metrics,url,username,withheld', 
                     'media.fields' : 'duration_ms,height,media_key,type,url,width,public_metrics,alt_text',
                     'max_results' : max_results_per_query,
-                    'start_time' : '2019-10-01T00:00:00Z', 
-                    'end_time'    : '2021-10-01T00:00:00Z'
+                    'start_time' : start_date,
+                    'end_time'    : end_date,
                      }                    
     print(query + "-is:retweet -is:reply -RT lang:en")
 
@@ -45,10 +45,10 @@ def get_fullarchive_tweets(query='', end_date='2021-10-01T00:00:00Z', next_token
     sleep(1)
     return json_response["meta"]
 
-def get_twitter_data(query='', numtweets=500, output_file=''):
+def get_twitter_data(query='', numtweets=500, output_file='' , start_date='2019-10-01T00:00:00Z' ,end_date='2021-10-01T00:00:00Z',):
     next_token = None
     for n in range(int(numtweets/max_results_per_query)):
-        output = get_fullarchive_tweets(query=query, next_token=next_token, filename=output_file )
+        output = get_fullarchive_tweets(query=query, next_token=next_token, filename=output_file , start_date=start_date ,end_date=end_date,)
         #print(output)
         if 'next_token' in output : 
             next_token = output['next_token']
