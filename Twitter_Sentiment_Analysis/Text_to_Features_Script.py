@@ -28,28 +28,23 @@ def main(filename):
     keyfiles_bigrams = [librarypath + "/Twitter_Sentiment_Analysis/Directional_Feature_Libraries/ML_positive_bigram.csv",
                         librarypath + "/Twitter_Sentiment_Analysis/Directional_Feature_Libraries/ML_negative_bigram.csv"]
     keyfiles_news = [librarypath + "/Twitter_Sentiment_Analysis/Relevance_Feature_Libraries/news_library.txt"]
-    keys = [get_keywords(keyfile) for keyfile in keyfiles_words] + [get_keybigrams(keyfile) for keyfile in keyfiles_bigrams] + [get_news_agencies(keyfile) for keyfile in keyfiles_news]
-    key_library = ["Henry08_pos", "Henry08_neg", "LM11_pos", "LM11_neg", "Hagenau13_pos", "Hagenau13_neg", "News_agencies"]
-    wordcounts_all = [[-1 for i in range(df_tweets.shape[0])] for j in range(len(keys))]
+    keys = [get_news_agencies(keyfile) for keyfile in keyfiles_news] + [get_keywords(keyfile) for keyfile in keyfiles_words] + [get_keybigrams(keyfile) for keyfile in keyfiles_bigrams]
+    key_library = ["News_agencies", "Henry08_pos", "Henry08_neg", "LM11_pos", "LM11_neg", "Hagenau13_pos", "Hagenau13_neg"]
+    wordcounts_all = [[-1 for i in range(df_tweets.shape[0])] for j in range(len(keys) + 1)]
     for i in range(df_tweets.shape[0]):
-      wordcounts = tweet_to_wordcounts(df_tweets["text"].iloc[i], keys[:4] + [keys[-1]])
-      bigramcounts = tweet_to_bigramcounts(df_tweets["text"].iloc[i], keys[4:6])
-      for j in range(len(keys)):
-          if j <= 3:
-              wordcounts_all[j][i] = wordcounts[j]
-          elif j == len(keys) - 1:
-              wordcounts_all[-1][i] = wordcounts[-1]
-          else:
-              wordcounts_all[j][i] = bigramcounts[j - 4]
-    for j in range(len(keys[:-1])):
-      df_tweets["Word_count_" + key_library[j]] = wordcounts_all[j]
-    df_tweets["News_agencies_names_count"] = wordcounts_all[-1]
+        wordcounts = tweet_to_wordcounts(df_tweets["text"].iloc[i], keys)
+        for j in range(len(keys) + 1):
+            wordcounts_all[j][i] = wordcounts[j]
+    for j in range(len(keys)):
+        df_tweets["Word_count_" + key_library[j]] = wordcounts_all[j]
+    df_tweets["Tweet_Length"] = wordcounts_all[-1]
     df_tweets = vader_tweet_sentiment(df_tweets)
-    df_trivial_tweets = df_tweets.loc[df_tweets["Word_count_Henry08_pos"] == 0].loc[df_tweets["Word_count_Henry08_neg"] == 0].loc[df_tweets["Word_count_LM11_pos"] == 0].loc[df_tweets["Word_count_LM11_neg"] == 0].loc[df_tweets["Word_count_Hagenau13_pos"] == 0].loc[df_tweets["Word_count_Hagenau13_neg"] == 0].loc[df_tweets["News_agencies_names_count"] == 0].loc[df_tweets["Compound_vader"] == 0].loc[df_tweets["Positive_vader"] == 0].loc[df_tweets["Negative_vader"] == 0].loc[df_tweets["Neutral_vader"] == 1]
-    df_tweets_shorten = df_tweets.drop(df_trivial_tweets.index).copy()
-    df_tweets_notext = df_tweets_shorten.drop(columns=["text"]).copy()
-    df_tweets_notext.to_csv(githubpath + "df_" + company_name + "_features_added.csv", index=False)
+    #df_trivial_tweets = df_tweets.loc[df_tweets["Word_count_Henry08_pos"] == 0].loc[df_tweets["Word_count_Henry08_neg"] == 0].loc[df_tweets["Word_count_LM11_pos"] == 0].loc[df_tweets["Word_count_LM11_neg"] == 0].loc[df_tweets["Word_count_Hagenau13_pos"] == 0].loc[df_tweets["Word_count_Hagenau13_neg"] == 0].loc[df_tweets["News_agencies_names_count"] == 0].loc[df_tweets["Compound_vader"] == 0].loc[df_tweets["Positive_vader"] == 0].loc[df_tweets["Negative_vader"] == 0].loc[df_tweets["Neutral_vader"] == 1]
+    #df_tweets_shorten = df_tweets.drop(df_trivial_tweets.index).copy()
+    df_tweets_notext = df_tweets.drop(columns=["text"]).copy()
+    df_tweets_notext.to_csv(githubpath + "atest_df_" + company_name + "_features_added.csv", index=False)
     print(company_name + " finished")                  # Comment out if prefer quiet
+    return None
 
   
 def get_keywords(filename: str):
@@ -144,15 +139,18 @@ def tweet_to_wordcounts(tweet, keys, normalize=True):
                   as reported in wordlocs.
     """
     tweet_doc = nlp(tweet.lower())
-    tweet_words = set([token.text for token in tweet_doc])
+    tweet_words = [token.text for token in tweet_doc if not token.is_stop]
+    tweet_bigrams = set([tweet_words[i] + " " + tweet_words[i+1] for i in range(len(tweet_words) - 1)])
     wordcounts = []
-    for i in range(len(keys)):    
-        this_wordcount = len(tweet_words.intersection(keys[i])) 
-        if normalize:
-            this_wordcount_normalized = this_wordcount / len(tweet)
-            wordcounts.append(this_wordcount_normalized)
-        else:
-            wordcounts.append(this_wordcount)
+    tweet_length = len(tweet)
+    for i in range(len(keys) - 2):
+        tweet_words_set = set(tweet_words)
+        this_wordcount = len(tweet_words_set.intersection(keys[i])) 
+        wordcounts.append(this_wordcount / tweet_length)
+    for i in range(2):
+        this_wordcount = len(tweet_bigrams.intersection(keys[i-2]))
+        wordcounts.append(this_wordcount / tweet_length)
+    wordcounts.append(tweet_length)
     return wordcounts
 
 
