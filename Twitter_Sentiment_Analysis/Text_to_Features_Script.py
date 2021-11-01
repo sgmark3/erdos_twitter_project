@@ -30,14 +30,15 @@ def main(filename):
     keyfiles_news = [librarypath + "/Twitter_Sentiment_Analysis/Relevance_Feature_Libraries/news_library.txt"]
     keys = [get_news_agencies(keyfile) for keyfile in keyfiles_news] + [get_keywords(keyfile) for keyfile in keyfiles_words] + [get_keybigrams(keyfile) for keyfile in keyfiles_bigrams]
     key_library = ["News_agencies", "Henry08_pos", "Henry08_neg", "LM11_pos", "LM11_neg", "Hagenau13_pos", "Hagenau13_neg"]
-    wordcounts_all = [[-1 for i in range(df_tweets.shape[0])] for j in range(len(keys) + 1)]
+    wordcounts_all = [[-1 for i in range(df_tweets.shape[0])] for j in range(len(keys) + 2)]
     for i in range(df_tweets.shape[0]):
         wordcounts = tweet_to_wordcounts(df_tweets["text"].iloc[i], keys)
-        for j in range(len(keys) + 1):
+        for j in range(len(keys) + 2):
             wordcounts_all[j][i] = wordcounts[j]
     for j in range(len(keys)):
         df_tweets["Word_count_" + key_library[j]] = wordcounts_all[j]
-    df_tweets["Tweet_Length"] = wordcounts_all[-1]
+    df_tweets["Tweet_Length_characters"] = wordcounts_all[-2]
+    df_tweets["Tweet_Length_words"] = wordcounts_all[-1]
     df_tweets = vader_tweet_sentiment(df_tweets)
     #df_trivial_tweets = df_tweets.loc[df_tweets["Word_count_Henry08_pos"] == 0].loc[df_tweets["Word_count_Henry08_neg"] == 0].loc[df_tweets["Word_count_LM11_pos"] == 0].loc[df_tweets["Word_count_LM11_neg"] == 0].loc[df_tweets["Word_count_Hagenau13_pos"] == 0].loc[df_tweets["Word_count_Hagenau13_neg"] == 0].loc[df_tweets["News_agencies_names_count"] == 0].loc[df_tweets["Compound_vader"] == 0].loc[df_tweets["Positive_vader"] == 0].loc[df_tweets["Negative_vader"] == 0].loc[df_tweets["Neutral_vader"] == 1]
     #df_tweets_shorten = df_tweets.drop(df_trivial_tweets.index).copy()
@@ -124,7 +125,7 @@ def get_news_agencies(filename: str):
     return set(news_agencies)
 
 
-def tweet_to_wordcounts(tweet, keys, normalize=True):
+def tweet_to_wordcounts(tweet, keys):
     """
     Input:
     tweet -> The raw tweet text in string
@@ -134,7 +135,7 @@ def tweet_to_wordcounts(tweet, keys, normalize=True):
                  If False, the raw word count will be returned.
     
     Output:
-    wordcounts -> A list of length num_keys. Each element is the (normalized) word count corresponding
+    wordcounts -> A list of length num_keys. Each element is the word count corresponding
                   to the number of phrases from one of the phrase lists that appear in the tweet, 
                   as reported in wordlocs.
     """
@@ -143,43 +144,20 @@ def tweet_to_wordcounts(tweet, keys, normalize=True):
     tweet_bigrams = set([tweet_words[i] + " " + tweet_words[i+1] for i in range(len(tweet_words) - 1)])
     wordcounts = []
     tweet_length = len(tweet)
+    tweet_length_word = len(tweet_doc)
     for i in range(len(keys) - 2):
         tweet_words_set = set(tweet_words)
         this_wordcount = len(tweet_words_set.intersection(keys[i])) 
-        wordcounts.append(this_wordcount / tweet_length)
+        wordcounts.append(this_wordcount)
     for i in range(2):
         this_wordcount = len(tweet_bigrams.intersection(keys[i-2]))
-        wordcounts.append(this_wordcount / tweet_length)
+        wordcounts.append(this_wordcount)
     wordcounts.append(tweet_length)
+    wordcounts.append(tweet_length_word)
     return wordcounts
 
 
-def tweet_to_bigramcounts(tweet, keys, normalize=True):
-    """
-    Input:
-    tweet -> The raw tweet text in string
-    keys -> The list of sets of key bigrams. For example, keys = ["Hagenau13_pos", "Hagenau13_neg"]
-            Each key bigram is assumed to contain only English letter and space.
-    normalize -> If True, the word count for each keyword list is normalized by tweet_length.
-                 If False, the raw word count will be returned.
-    
-    Output:
-    wordcounts -> A list of length num_keys. Each element is the (normalized) word count corresponding
-                  to the number of phrases from one of the phrase lists that appear in the tweet, 
-                  as reported in wordlocs.
-    """
-    tweet_doc = nlp(tweet.lower())
-    tweet_words = [token.text for token in tweet_doc if not token.is_stop]
-    tweet_bigrams = set([tweet_words[i] + " " + tweet_words[i+1] for i in range(len(tweet_words) - 1)])
-    wordcounts = []
-    for i in range(len(keys)):      
-        this_wordcount = len(tweet_bigrams.intersection(keys[i])) 
-        if normalize:
-            this_wordcount_normalized = this_wordcount / len(tweet)
-            wordcounts.append(this_wordcount_normalized)
-        else:
-            wordcounts.append(this_wordcount)
-    return wordcounts
-  
+
+
   
   
