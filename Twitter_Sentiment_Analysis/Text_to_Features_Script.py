@@ -43,7 +43,7 @@ def main(filename):
     #df_trivial_tweets = df_tweets.loc[df_tweets["Word_count_Henry08_pos"] == 0].loc[df_tweets["Word_count_Henry08_neg"] == 0].loc[df_tweets["Word_count_LM11_pos"] == 0].loc[df_tweets["Word_count_LM11_neg"] == 0].loc[df_tweets["Word_count_Hagenau13_pos"] == 0].loc[df_tweets["Word_count_Hagenau13_neg"] == 0].loc[df_tweets["News_agencies_names_count"] == 0].loc[df_tweets["Compound_vader"] == 0].loc[df_tweets["Positive_vader"] == 0].loc[df_tweets["Negative_vader"] == 0].loc[df_tweets["Neutral_vader"] == 1]
     #df_tweets_shorten = df_tweets.drop(df_trivial_tweets.index).copy()
     df_tweets_notext = df_tweets.drop(columns=["text"]).copy()
-    df_tweets_notext.to_csv(githubpath + "atest_df_" + company_name + "_features_added.csv", index=False)
+    df_tweets_notext.to_parquet(githubpath + "atest_df_" + company_name + "_features_added.parquet", index=False)
     print(company_name + " finished")                  # Comment out if prefer quiet
     return None
 
