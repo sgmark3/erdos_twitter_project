@@ -17,6 +17,20 @@ def save_sp500_tickers():
     print(df.head())
     df.to_csv('data/Stock_indices/snp500_list.csv', index=False)
 
+def get_companylist():
+    """
+    This function gets SnP500 table from wikipedia and saves into a csv file
+    """
+    resp = requests.get('https://topforeignstocks.com/indices/components-of-the-sp-500-index/')
+    soup = bs.BeautifulSoup(resp.text, 'lxml')
+    table = soup.find('table', {'class': 'tablepress'})
+    df=pd.read_html(str(table))
+    #print(df)
+    # convert list to dataframe
+    df=pd.DataFrame(df[0])
+    print(df.head())
+    df.to_csv('data/Stock_indices/snp500_list_v2.csv', index=False)
 
 if __name__=="__main__":
-  save_sp500_tickers()
+  #save_sp500_tickers()
+  get_companylist()
