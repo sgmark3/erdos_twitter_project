@@ -21,7 +21,7 @@ def get_fullarchive_tweets(query='', start_date='2019-10-01T00:00:00Z' ,end_date
     # https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
     # https://developer.twitter.com/en/docs/twitter-api/v1/rules-and-filtering/search-operators
     #print("query = ", query)
-    query_params = {'query': query + "-is:retweet -is:reply -RT lang:en", 
+    query_params = {'query': query + "-is:retweet -is:reply lang:en", 
                     'tweet.fields': 'attachments,author_id,created_at,entities,id,in_reply_to_user_id,public_metrics,possibly_sensitive,referenced_tweets,source,text,withheld',
                     'expansions' :'attachments.media_keys,author_id,in_reply_to_user_id,entities.mentions.username,referenced_tweets.id,referenced_tweets.id.author_id', 
                     'user.fields':'created_at,id,location,entities,name,pinned_tweet_id,profile_image_url,public_metrics,url,username,withheld', 
