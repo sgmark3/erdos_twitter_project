@@ -5,7 +5,7 @@ from vader_tweet_sentiment import vader_tweet_sentiment
 
 nlp = spacy.load('en_core_web_sm')
 
-localpath = "/Users/josht/Documents/User_based_tweets/"
+localpath = "/Users/josht/Documents/Tweets_processed/"
 librarypath = "/Users/josht/Documents/GitHub/erdos_twitter_project"
 githubpath = "/Users/josht/Documents/GitHub/erdos_twitter_project/Data_Preprocessed/"
 
@@ -45,7 +45,7 @@ def main(df_tweets):
     df_tweets = vader_tweet_sentiment(df_tweets)
     #df_trivial_tweets = df_tweets.loc[df_tweets["Word_count_Henry08_pos"] == 0].loc[df_tweets["Word_count_Henry08_neg"] == 0].loc[df_tweets["Word_count_LM11_pos"] == 0].loc[df_tweets["Word_count_LM11_neg"] == 0].loc[df_tweets["Word_count_Hagenau13_pos"] == 0].loc[df_tweets["Word_count_Hagenau13_neg"] == 0].loc[df_tweets["News_agencies_names_count"] == 0].loc[df_tweets["Compound_vader"] == 0].loc[df_tweets["Positive_vader"] == 0].loc[df_tweets["Negative_vader"] == 0].loc[df_tweets["Neutral_vader"] == 1]
     #df_tweets_shorten = df_tweets.drop(df_trivial_tweets.index).copy()
-    df_tweets.to_parquet(githubpath + "df_user_based_tweets2_features_added.parquet", index=False)
+    df_tweets.to_parquet(githubpath + "df_tweets_processed_Shashank.parquet", index=False)
     #df_tweets.to_parquet(githubpath + "df_" + company_name + "_features_added.parquet", index=False)
     #print(company_name + " finished")                  # Comment out if prefer quiet
     return None
