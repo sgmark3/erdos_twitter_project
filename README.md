@@ -53,7 +53,7 @@ The classification frameworks that we adopt are the following:
 * Ligt gradient boosting
 * Xgboost
 
-All of our code can be found in the [ML_Model_Tweet_Prediction](https://github.com/msjithin/erdos_twitter_project/tree/main/ML_Model_Tweet_Prediction) directory of this Github repository. 
+All of our machine learning code for prediction of tweet popularity can be found in the [ML_Model_Tweet_Prediction](https://github.com/msjithin/erdos_twitter_project/tree/main/ML_Model_Tweet_Prediction) directory of this Github repository. 
 ## Prediction of Market Movement
 ### Features
 ### Machine Learning Framework
