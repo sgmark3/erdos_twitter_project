@@ -10,7 +10,7 @@
 # Introduction and Motivation
 This Github repository is devoted to completing the Erdos Institute, data science bootcamp project to obtain a certificate of competence and excellence in the techniques of data science and more specifically machine learning techniques. 
 
-Our project stems from the corporate sponsored Susquehanna project which challenges participants to develop a machine learning framework to predict tweet popularity. We have chosen to build on the prompt by extending our project into a financial context. 
+Our project stems from the corporate sponsored [Susquehanna](https://sig.com/) project which challenges participants to develop a machine learning framework to predict tweet popularity. We have chosen to build on the prompt by extending our project into a financial context. 
 
 The first direction is to do just as the prompt suggests, so we collect Twitter data from various sources and attempt to predict the popularity of tweets based on various features that are exclusive to twitter, such as a user's number of followers, number of historic tweets, length of the tweet, etc., and we pair these features with those generated via natural language processing and libraries of historically positive and negative words in order to establish the sentiment of a tweet. 
 
