@@ -35,6 +35,9 @@ For the historic stock data, we query the Alphavantage API for SP500 minute to m
 ## Prediction of Tweet Popularity
 ### Features
 ### Machine Learning Framework
+In order to predict a tweet's popularity, we choose several, well established classifcation algorithms in the literature and compare their performance. In order to escape black-box hysteria and in the preservation of time, we limit ourselves to algorithms that we, the authors, have personally understood well. However, future work could certainly employ various other machine learning classification algorithms. 
+
+The classification frameworks that we adopt are the following: logistic regression, k nearest neighbors, random forests, decision trees paired with adaboost, light gradient boosting, and xgboost. All of our code can be found in the [ML_Model_Tweet_Prediction](https://github.com/msjithin/erdos_twitter_project/tree/main/ML_Model_Tweet_Prediction) directory of this Github repository. 
 ## Prediction of Market Movement
 ### Features
 ### Machine Learning Framework
