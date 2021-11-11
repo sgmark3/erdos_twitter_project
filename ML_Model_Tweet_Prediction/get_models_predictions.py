@@ -22,8 +22,14 @@ df=pd.concat([df,pd.read_parquet(os.path.join(local_path, file_location, "df_twe
 df2 = df.copy(deep=True)
 # print(df2.columns)
 
-parameters_to_keep = ['entities_cashtags','entities_urls','public_metrics_followers_count',
-                    'public_metrics_following_count', 'public_metrics_listed_count','public_metrics_tweet_count',
+# parameters_to_keep = ['entities_cashtags','entities_urls','public_metrics_followers_count',
+#                     'public_metrics_following_count', 'public_metrics_listed_count','public_metrics_tweet_count',
+#                     'Tweet_Length_characters', 'Compound_vader','Positive_vader', 'Negative_vader', 'Neutral_vader']
+parameters_to_keep = ['entities_hashtags', 'entities_cashtags','entities_urls','public_metrics_followers_count',
+                    'public_metrics_following_count', 'public_metrics_listed_count','public_metrics_tweet_count','media_type','entities_mentions',
+                    'Word_count_Henry08_pos', 'Word_count_Henry08_neg',
+                    'Word_count_LM11_pos', 'Word_count_LM11_neg',
+                    'Word_count_Hagenau13_pos', 'Word_count_Hagenau13_neg',
                     'Tweet_Length_characters', 'Compound_vader','Positive_vader', 'Negative_vader', 'Neutral_vader']
 
 dropthese=['created_at','created_at_user','text','Company_name','media_type']
@@ -34,21 +40,9 @@ for col in df2.columns:
 
 print(df2.columns)
 y_likes = df["public_metrics_like_count"].apply(lambda x: 1 if x > 20  else 0 )
-# y_likes=[]
-# for k in df.public_metrics_like_count:
-#     if k>20:
-#         y_likes.append(1)
-#     else:
-#         y_likes.append(0)
-     
      
 y_retweets= df["public_metrics_retweet_count"].apply(lambda x: 1 if x > 20  else 0 )
-# for k in df.public_metrics_retweet_count  :
-#     if k>20:
-#         y_retweets.append(1)
-#     else:
-#         y_retweets.append(0)
-        
+
 X = df2   
 # X = df.drop(['public_metrics_like_count'],axis=1)
 
