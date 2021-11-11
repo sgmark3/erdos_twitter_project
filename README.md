@@ -27,7 +27,7 @@ We chose the above two-step filtering procedure (filtering via Twitter account a
 The resulting, aggregated dataset comprises of 500,000 tweets from March 2019 to March 2021 and can be found in the [Data_Preprocessed](https://github.com/msjithin/erdos_twitter_project/tree/main/Data/Data_Preprocessed) directory of this Github repository.  
 
 ## Stock Dataset Description
-For the historic stock data, we query the Alphavantage API for SP500 minute to minute data from March 2019 to March 2021. 
+For the historic stock data, we query the Alphavantage API for stock data pertaining to SP500 companies from March 2019 to March 2021. The time resolution of the stock prices is minute to minute, and we retain essential asset data such as opening price, closing price, and the trading volume. 
 # Data Pre-processing
 
 
