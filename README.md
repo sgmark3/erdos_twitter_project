@@ -32,6 +32,7 @@ For the historic stock data, we query the Alphavantage API for SP500 minute to m
 
 
 # Machine Learning Piplines
+In the below sub-sections, we detail the machine learning features and pipelines used in order to predict a tweet's popularity as well as the subsequent market movement. In each pipeline, we incorporate several models as well as several pairings of features in order to recover the best performing model.
 ## Prediction of Tweet Popularity
 ### Features
 ### Machine Learning Framework
