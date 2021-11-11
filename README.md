@@ -28,7 +28,7 @@ The resulting, aggregated dataset comprises of 500,000 tweets from March 2019 to
 
 ## Stock Dataset Description
 For the historic stock data, we query the Alphavantage API for SP500 minute to minute data from March 2019 to March 2021. 
-### Data Pre-processing
+# Data Pre-processing
 
 
 # Machine Learning Piplines
