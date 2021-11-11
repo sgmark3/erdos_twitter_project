@@ -27,7 +27,9 @@ We chose the above two-step filtering procedure (filtering via Twitter account a
 The resulting, aggregated dataset comprises of 500,000 tweets from March 2019 to March 2021 and can be found in the [Data_Preprocessed](https://github.com/msjithin/erdos_twitter_project/tree/main/Data/Data_Preprocessed) directory of this Github repository.  
 
 ## Stock Dataset Description
-For the historic stock data, we query the Alphavantage API for stock data pertaining to SP500 companies from March 2019 to March 2021. The time resolution of the stock prices is minute to minute, and we retain essential asset data such as opening price, closing price, and the trading volume. 
+For the historic stock data, we query the Alphavantage API for stock data pertaining to SP500 companies from March 2019 to March 2021. The time resolution of the stock prices is minute to minute. As twitter is a comparitively high frequency social media platform, we insisted on retaining minute to minute data, but unfortunately, this time resolution was only freely available over the aforementioned period. More extensive data for the purpose of backtesting can be obtained, albeit at substantial cost, via data repository sites such as [QuantQuote](https://quantquote.com/).
+
+We retain most of the standard asset data such as opening price, closing price, trading volume, 52 week high and lows, but as our primary task is the effect of popular tweets on asset movements, we only incorporate opening and closing prices in our resulting machine learning framework.
 # Data Pre-processing
 
 
