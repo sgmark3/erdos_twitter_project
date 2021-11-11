@@ -30,8 +30,14 @@ The resulting, aggregated dataset comprises of 500,000 tweets from March 2019 to
 For the historic stock data, we query the Alphavantage API for stock data pertaining to SP500 companies from March 2019 to March 2021. The time resolution of the stock prices is minute to minute. As twitter is a comparitively high frequency social media platform, we insisted on retaining minute to minute data, but unfortunately, this time resolution was only freely available over the aforementioned period. More extensive data for the purpose of backtesting can be obtained, albeit at substantial cost, via data repository sites such as [QuantQuote](https://quantquote.com/).
 
 We retain most of the standard asset data such as opening price, closing price, trading volume, 52 week high and lows, but as our primary task is the effect of popular tweets on asset movements, we only incorporate opening and closing prices in our resulting machine learning framework.
-# Data Pre-processing
+# Data Pre-processing and Visualization
+In order to make our data accessible via the machine learning algorithms of SKlearn, we first clean the data for anomalies and convert un-interpretable data into numerical values. That is, we convert the following Twitter data into simply a count of the number of each such occurence:
+* URLs appearing in a tweet
+* Hashtags appearing in a tweet
+* Cashtags appearing in a tweet
+* Other entities appearing in a tweet
 
+For example, if there are two URLs that appear in a tweet, then we replace the column corresponding to the URLs with a count of two.
 
 # Machine Learning Piplines
 In the below sub-sections, we detail the machine learning features and pipelines used in order to predict a tweet's popularity as well as the subsequent market movement. In each pipeline, we incorporate several models as well as several pairings of features in order to recover the best performing model.
