@@ -18,7 +18,7 @@ The second direction is to then predict the movement of asset prices while condi
 We gather historic data from both Twitter and the stock market using the [Twitter API](https://developer.twitter.com/en/docs) and the [AlphaVantage API](https://www.alphavantage.co/), respectively. The descriptions of both data sets can be found below.  
 
 ## Twitter Dataset Description
-For the historic twitter data, we query the Twitter API for tweets from financially relevant Twitter accounts, such as Bloomberg, Yahoo Finance, The Economist, etc. from March 2019 to March 2021, and we filter the tweets for those that include either a company's full name, a hashtag of a company's stock ticker, or a cash tag of a company's stock ticker. The Twitter data was only pulled for those companies that comprise the SP500, but our code could easily be generalized to include any or all companies that exist on any stock exchange. 
+For the historic twitter data, we query the Twitter API for tweets from financially relevant Twitter accounts, such as Bloomberg, Yahoo Finance, The Economist, etc. from March 2019 to March 2021, and we filter the tweets for those that include either a company's full name, a hashtag of a company's stock ticker, or a cash tag of a company's stock ticker. The Twitter data was only pulled for those companies that are in the SP500 list, but our code could easily be generalized to include any or all companies that exist on any stock exchange. 
 
 We chose the above two-step filtering procedure (filtering via Twitter account and company mentions) due to the generally known, widespread presence of noise on Twitter. Surprisingly over the course of this project, we discovered that including simply the latter failed to sufficiently filter out noise, even when paired with additional filters such as the presence of financially relevant words. The result of our two-step filtering is that we recover Tweet data that is financially contextualized, and hence, we expect these tweets to serve as strong signals in predicting future market movement. Admittedly, this filtering procedure does forego other potentially strong signals such as a celebrity tweeting about a particular company or a given company tweeting about the release of a new project; the inclusion of such data is a potential direction for future work. 
 
@@ -39,7 +39,7 @@ In order to make our data accessible via the machine learning algorithms of SKle
 For example, if there are two URLs that appear in a tweet, then we replace the column corresponding to the URLs with a count of two.
 
 # Machine Learning Piplines
-In the below sub-sections, we detail the machine learning features and pipelines used in order to predict a tweet's popularity as well as the subsequent market movement. In each pipeline, we incorporate several models as well as several pairings of features in order to recover the best performing model.
+In the below sub-sections, we detail the machine learning features and pipelines used in order to predict a tweet's popularity as well as the subsequent market movement. In each pipeline, we incorporate several models as well as several combinations of features in order to recover the best performing model.
 ## Prediction of Tweet Popularity
 ### Features
 ### Machine Learning Framework
