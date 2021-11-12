@@ -54,6 +54,7 @@ The classification frameworks that we adopt are the following:
 * Random forests
 * Decision trees paired with adaboost
 * Light gradient boosting
+* Naive Bayes
 
 All of our machine learning code for prediction of tweet popularity can be found in the [ML_Model_Tweet_Prediction](https://github.com/msjithin/erdos_twitter_project/tree/main/ML_Model_Tweet_Prediction) directory of this Github repository. 
 ## Prediction of Market Movement
