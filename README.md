@@ -38,6 +38,9 @@ In order to make our data accessible via the machine learning algorithms of SKle
 
 For example, if there are two URLs that appear in a tweet, then we replace the column corresponding to the URLs with a count of two.
 
+To gain a general sense for the relationships between each column of Twitter data, we have performed a preliminary, data visualization, which can be found in the 
+[Data_Visualization](https://github.com/msjithin/erdos_twitter_project/tree/main/Data_Visualization) directory of this Github repository. 
+
 # Machine Learning Piplines
 In the below sub-sections, we detail the machine learning features and pipelines used in order to predict a tweet's popularity as well as the subsequent market movement. In each pipeline, we incorporate several models as well as several combinations of features in order to recover the best performing model.
 ## Prediction of Tweet Popularity
