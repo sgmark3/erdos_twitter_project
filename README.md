@@ -7,6 +7,7 @@
 - [Yossathorn (Josh) Tawabutr](https://www.linkedin.com/in/yossathorn-tawabutr)
 
 # Introduction and Motivation
+![alt text](https://www.google.com/search?q=twitter+png+&tbm=isch&ved=2ahUKEwiUkfOM7ZX0AhUO_6wKHSB4BlgQ2-cCegQIABAA&oq=twitter+png+&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgAELEDEEM6CAgAEIAEELEDOgQIABBDOgQIABADUIEFWN4KYN8MaABwAHgAgAFsiAHfBJIBAzIuNJgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=T_SPYdStCY7-swWg8JnABQ&bih=679&biw=1278#imgrc=glwcI1QRB1nMNM)
 This Github repository is devoted to completing the [Erdos Institute](https://www.erdosinstitute.org/), data science bootcamp project to obtain a certificate of competence and excellence in the techniques of data science and more specifically machine learning. We would first like to graciously thank the constituents of the Erdos institute for their incredible guidance, encouragement, and resources while this project was undertaken. 
 
 Our project stems from the corporate sponsored [Susquehanna](https://sig.com/) project which challenges participants to develop a machine learning framework to predict tweet popularity. Many such projects and solution attempts have appeared both in the academic literature as well as in other public sources, such as Github and various data science discussion forums. Therefore, we have chosen to build on the prompt by extending our project into a novel, financial context. 
