@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
-
 from scipy.stats import norm
 import streamlit as st
 from web_app import web_app_intro, next_steps
