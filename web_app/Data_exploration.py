@@ -2,7 +2,7 @@
 import streamlit as st
 from PIL import Image
 image_heatmap = Image.open('web_app/images/correalation_heatmap.png')
-image_textlength = Image.open('web_app\images/text_length.png')
+image_textlength = Image.open('web_app/images/text_length.png')
 image_vader = Image.open('web_app/images/vader.png')
 image_hourly_distribution = Image.open('web_app/images/hourly_distribution.png')
 
