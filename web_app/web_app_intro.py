@@ -31,12 +31,14 @@ def app():
         #print(" ******** using OLD values ************")
         tweet_df = st.session_state.tweet_df
 
-    tweet_text = tweet_df['text'].iloc[0]
+    tweet_text = tweet_df['text'].iloc[0].split('\n')
 
     st.dataframe(tweet_df)
     st.markdown("###### Tweet text :")
-    st.text(tweet_text)
+    st.info("   \n  ".join(tweet_text))    
+    #st.text_area(label="Tweet text ", value="   \n  ".join(tweet_text), height=20 )
 
     ## setting session states
     st.session_state.text = tweet_url
     st.session_state.tweet_df = tweet_df
+    

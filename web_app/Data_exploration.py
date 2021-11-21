@@ -1,5 +1,10 @@
 
 import streamlit as st
+from PIL import Image
+image_heatmap = Image.open('web_app\images\correalation_heatmap.png')
+image_textlength = Image.open('web_app\images\\text_length.png')
+image_vader = Image.open('web_app\images\\vader.png')
+image_hourly_distribution = Image.open('web_app\images\hourly_distribution.png')
 
 def app():
 
@@ -42,20 +47,22 @@ In order to make our data accessible via the machine learning algorithms of SKle
 * Cashtags appearing in a tweet
 * Other entities appearing in a tweet
 * News agencies appearing in a tweet
-
+    ''')
+    st.image(image_heatmap, caption='Correlation heat map')
+    st.markdown('''
 For example, if there are two URLs that appear in a tweet, then we replace the column corresponding to the URLs with a count of two.
 
 We are also concerned with the effects that a tweet's sentiment has on its popularity, we employ two metrics to determine tweet sentiment. The first is the use of the [Vader](https://github.com/cjhutto/vaderSentiment) natural language processing library. Vader has an advantage over other language processing libraries, because it is specifically designed to characterize the sentiment of social media data. That is, it incorporates slang terms, acronyms, and emojis- all of which are commonplace on social media. Secondly, we employ a word count of several word and bigram libraries that have appeared in the financial literature to characterize whether a tweet speaks positively or negatively about the underlying company or the companies' stock. The libraries that we use can be found at [(Henry, 2008)](https://journals.sagepub.com/doi/10.1177/0021943608319388), [(Loughran and Mcdonald, 2011)](https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.2010.01625.x), and [(Hagenau, 2013)](https://www.researchgate.net/publication/254051649_Automated_News_Reading_Stock_Price_Prediction_Based_on_Financial_News_Using_Context-Specific_Features).
-
+''')
+    st.image(image_vader, caption='Vader sentiment analysis')
+    st.markdown('''
 Finally, as the tweet prediction literature often explicitly employs time stamps, we  make three additional columns - morning, afternoon, and night that are derived from the the time stamp associated to when the tweet was made.
 
 To gain a general sense for the relationships between each column of Twitter data, we have performed a preliminary, data visualization, which can be found in the
 [Data_Visualization](https://github.com/msjithin/erdos_twitter_project/tree/main/Data_Visualization) directory of this Github repository.
 
-# Machine Learning Piplines
 
-In the below sub-sections, we detail the machine learning features and pipelines used in order to predict a tweet's popularity as well as the subsequent market movement. In each pipeline, we incorporate several models as well as several combinations of features in order to recover the best performing model.
-    
     ''')
-
-
+    st.image(image_textlength, caption='Text character count')
+    st.image(image_hourly_distribution, caption='Hourly distribution of likes')
+    
