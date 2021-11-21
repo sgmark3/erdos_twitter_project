@@ -16,4 +16,10 @@ def app():
     default_tweet = 'https://twitter.com/markets/status/1458402478123327497'
     tweet_url = str(st.text_input("Enter tweet url ", default_tweet))
     tweet_df = tweet.get_info(tweet_url)    
+    tweet_text = tweet_df['text'].iloc[0]
+
     st.dataframe(tweet_df)
+    st.markdown("###### Tweet text :")
+    st.text(tweet_text)
+
+    
