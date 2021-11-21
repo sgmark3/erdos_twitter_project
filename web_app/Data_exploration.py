@@ -1,25 +1,15 @@
-# Machine learning pipeline to extract a functional relationship between tweets and a stock's subsequent market reaction
 
-[Web application link](https://share.streamlit.io/msjithin/erdos_twitter_project/main/web_app_main.py)
+import streamlit as st
+from PIL import Image
+image_heatmap = Image.open('web_app/images/correalation_heatmap.png')
+image_textlength = Image.open('web_app/images/text_length.png')
+image_vader = Image.open('web_app/images/vader.png')
+image_hourly_distribution = Image.open('web_app/images/hourly_distribution.png')
 
-# Team Members:
+def app():
 
-- [Jithin Madhusudanan Sreekala](https://www.linkedin.com/in/jithinms)
-- [Shashank Markande](https://www.linkedin.com/in/smarkande)
-- [Andrew McMillan](https://www.linkedin.com/in/andrew-mcmillan-68983b96)
-- [Yossathorn (Josh) Tawabutr](https://www.linkedin.com/in/yossathorn-tawabutr)
-
-# Introduction and Motivation
-
-This Github repository is devoted to completing the [Erdos Institute](https://www.erdosinstitute.org/), data science bootcamp project to obtain a certificate of competence and excellence in the techniques of data science and more specifically machine learning. We would first like to graciously thank the constituents of the Erdos institute for their incredible guidance, encouragement, and resources while this project was undertaken.
-
-Our project stems from the corporate sponsored [Susquehanna](https://sig.com/) project which challenges participants to develop a machine learning framework to predict tweet popularity. Many such projects and solution attempts have appeared both in the academic literature as well as in other public sources, such as Github and various data science discussion forums. Therefore, we have chosen to build on the prompt by extending our project into a novel, financial context.
-
-The first direction is to do just as the prompt suggests, so we collect Twitter data from various sources and attempt to predict the popularity of tweets based on various features that are exclusive to twitter, such as a user's number of followers, number of historic tweets, length of the tweet, etc., and we pair these features with those generated via [natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing) and libraries of historically positive and negative words in order to establish the [sentiment](https://en.wikipedia.org/wiki/Sentiment_analysis) of a tweet.
-
-The second direction is to then predict the movement of asset prices while conditioning on the results of the predicted tweet popularity. That is, we hypothesize that market movements will generally be affected by tweets that receive widespread attention, and by using the predicted tweets as initial data, we can potentially gain a first mover advantage in the market. To the author's knowledge, this is the first time such a coupling of the first and second direction has appeared publicly.
-
-# Data Gathering
+    st.markdown('''
+    # Data Gathering
 
 We gather historic data from both Twitter and the stock market using the [Twitter API](https://developer.twitter.com/en/docs) and the [AlphaVantage API](https://www.alphavantage.co/), respectively. The descriptions of both data sets can be found below.
 
@@ -57,47 +47,22 @@ In order to make our data accessible via the machine learning algorithms of SKle
 * Cashtags appearing in a tweet
 * Other entities appearing in a tweet
 * News agencies appearing in a tweet
-
+    ''')
+    st.image(image_heatmap, caption='Correlation heat map')
+    st.markdown('''
 For example, if there are two URLs that appear in a tweet, then we replace the column corresponding to the URLs with a count of two.
 
 We are also concerned with the effects that a tweet's sentiment has on its popularity, we employ two metrics to determine tweet sentiment. The first is the use of the [Vader](https://github.com/cjhutto/vaderSentiment) natural language processing library. Vader has an advantage over other language processing libraries, because it is specifically designed to characterize the sentiment of social media data. That is, it incorporates slang terms, acronyms, and emojis- all of which are commonplace on social media. Secondly, we employ a word count of several word and bigram libraries that have appeared in the financial literature to characterize whether a tweet speaks positively or negatively about the underlying company or the companies' stock. The libraries that we use can be found at [(Henry, 2008)](https://journals.sagepub.com/doi/10.1177/0021943608319388), [(Loughran and Mcdonald, 2011)](https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.2010.01625.x), and [(Hagenau, 2013)](https://www.researchgate.net/publication/254051649_Automated_News_Reading_Stock_Price_Prediction_Based_on_Financial_News_Using_Context-Specific_Features).
-
+''')
+    st.image(image_vader, caption='Vader sentiment analysis')
+    st.markdown('''
 Finally, as the tweet prediction literature often explicitly employs time stamps, we  make three additional columns - morning, afternoon, and night that are derived from the the time stamp associated to when the tweet was made.
 
 To gain a general sense for the relationships between each column of Twitter data, we have performed a preliminary, data visualization, which can be found in the
 [Data_Visualization](https://github.com/msjithin/erdos_twitter_project/tree/main/Data_Visualization) directory of this Github repository.
 
-# Machine Learning Piplines
 
-In the below sub-sections, we detail the machine learning features and pipelines used in order to predict a tweet's popularity as well as the subsequent market movement. In each pipeline, we incorporate several models as well as several combinations of features in order to recover the best performing model.
-
-## Prediction of Tweet Popularity
-
-### Features
-
-For the machine learning frameworks that we detail below, we use a variety of features from the pulled data, which are the following: the number of cashtags, the number of hashtags, the number of URLs, the number of mentions, the number of followers, the number of followings, the listed count, the number of tweets, the number of referenced news agencies, the positive and negative word and bigram counts associated with (Henry, 2008), (Loughran and Mcdonald, 2011), and (Hagenau, 2013), the number of characters in a tweet, the number of words in a tweet, the compound, positive, negative, and neutral Vader scores, and whether the tweet was made during the morning, evening or night.
-
-Unfortunately, with a dataset of close to a million tweets and so many features, several of our machine learning implementations are prohibitively slow. Therefore, we use the [feature importance methods](https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html) of Sklearn to extract which features are most important and only use those features when computation time is a concern.
-
-### Machine Learning Framework
-
-In order to predict a tweet's popularity, we choose several, well established classifcation algorithms in the literature and compare their performance. In order to escape black-box hysteria and in the preservation of time, we limit ourselves to algorithms that we, the authors, have personally understood well. However, future work could certainly employ various other machine learning classification algorithms.
-
-The classification frameworks that we adopt are the following:
-
-* Logistic regression
-* K nearest neighbors
-* Random forests
-* Decision trees paired with adaboost
-* Light gradient boosting
-* Naive Bayes
-
-The classification problem is to predict when a particular feature will eclipse a certain threshold of likes. Throughout, this threshold is taken to be a hyperparameter, so that our code easily generalizes for any threshold of choice.
-
-All of our machine learning code for prediction of tweet popularity can be found in the [ML_Model_Tweet_Prediction](https://github.com/msjithin/erdos_twitter_project/tree/main/ML_Model_Tweet_Prediction) directory of this Github repository.
-
-## Prediction of Market Movement
-
-### Features
-
-### Machine Learning Framework
+    ''')
+    st.image(image_textlength, caption='Text character count')
+    st.image(image_hourly_distribution, caption='Hourly distribution of likes')
+    
