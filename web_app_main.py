@@ -14,9 +14,29 @@ PAGES = {
     "Machine learning framework" :ml_framework,
     "next step" : next_steps
 }
-selection = st.sidebar.radio("Navigation", list(PAGES.keys()))
-page = PAGES[selection]
-page.app()
+if "page" not in st.session_state:
+    st.session_state.update({
+        # Default page
+        "page": "Prediction",
+
+        # Radio, selectbox and multiselect options
+        "options": PAGES.keys(),
+
+        # Default widget values
+        "text": "https://twitter.com/markets/status/1458402478123327497",
+        "tweet_df" : None
+    })
+
+with st.sidebar:
+    page = st.radio("Select your page", tuple(PAGES.keys()))
+    
+# pages = PAGES[page]
+# pages.app()
+PAGES[page].app()
+
+#selection = st.sidebar.radio("Navigation", list(PAGES.keys()))
+#page = PAGES[selection]
+#page.app()
 
 st.sidebar.title("Team members")
 st.sidebar.markdown('''
