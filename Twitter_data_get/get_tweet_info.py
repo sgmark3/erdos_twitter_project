@@ -6,6 +6,7 @@ from Twitter_data_get.save_to_csvfile import flatten_dict, unfold_dict
 import os.path as os_path
 from datetime import datetime
 import streamlit as st
+from Twitter_data_get.process_data import process_df
 
 search_url = "https://api.twitter.com/2/tweets"
 # check the following for details
@@ -96,7 +97,7 @@ def json_to_csv(data, output_name=None):
     final_df.entities_urls = final_df.entities_urls.apply(lambda x: unfold_dict(x, 'display_url') )
     final_df.entities_mentions = final_df.entities_mentions.apply(lambda x: unfold_dict(x, 'username') )
 
-    ## 
+    final_df = process_df(final_df)
     return final_df
         
         
