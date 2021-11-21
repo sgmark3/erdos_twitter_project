@@ -11,7 +11,7 @@ def get_tweet_df(tweet_url):
 
 def app():
     ## function gets tweet data and predictions
-    st.title('** Tweet analysis **')
+    st.title(' Tweet popularity ')
     st.markdown('''
     
     ''')
@@ -41,4 +41,24 @@ def app():
     ## setting session states
     st.session_state.text = tweet_url
     st.session_state.tweet_df = tweet_df
+    
+    popularity_precition = 'Popular'
+    # add model fitting and result here
+    st.success('The tweet is predicted to be : ** {} ** '.format(popularity_precition))
+    ticker_name = 'TSLA'
+    stock_movement = 'UP'
+    st.success('Expected stock price movement for ticker **{}** is : **{}**'.format(ticker_name, stock_movement))
+    st.markdown('''
+                # Details
+
+Strategies
+
+Outcomes
+The model predict whether the given tweet is expected to be 'Popular' or 'Not popular'.
+
+Implementation 
+
+                ''')
+    
+    
     
