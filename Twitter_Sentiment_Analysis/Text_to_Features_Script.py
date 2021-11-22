@@ -5,6 +5,7 @@ from vader_tweet_sentiment import vader_tweet_sentiment
 
 nlp = spacy.load('en_core_web_sm')
 
+# Customize there two lines
 librarypath = ".../GitHub/erdos_twitter_project"
 githubpath = ".../GitHub/erdos_twitter_project/Data_Preprocessed/"
 
