@@ -1,15 +1,17 @@
 import pandas as pd
 import spacy
 
-from vader_tweet_sentiment import vader_tweet_sentiment
+#from vader_tweet_sentiment import vader_tweet_sentiment
 
+from Twitter_Sentiment_Analysis.vader_tweet_sentiment import vader_tweet_sentiment
 nlp = spacy.load('en_core_web_sm')
 
-# Customize there two lines
-librarypath = ".../GitHub/erdos_twitter_project"
-githubpath = ".../GitHub/erdos_twitter_project/Data_Preprocessed/"
+# # Customize there two lines
+# librarypath = ".../GitHub/erdos_twitter_project"
+# githubpath = ".../GitHub/erdos_twitter_project/Data_Preprocessed/"
+librarypath = 'Twitter_Sentiment_Analysis'
 
-def main(df_tweets):
+def get_text_analysis(df_tweets):
     """
     This function downloads the tweet csv file into a dataframe,
     compute the Vader scores and normalized word counts based on all libraries,
@@ -18,13 +20,13 @@ def main(df_tweets):
     and finally delete the text column. 
     The resulting data frame is then saved to the GitHub directory.
     """
-    keyfiles_words = [librarypath + "/Twitter_Sentiment_Analysis/Directional_Feature_Libraries/Henry08_poswords.txt",
-                      librarypath + "/Twitter_Sentiment_Analysis/Directional_Feature_Libraries/Henry08_negwords.txt",
-                      librarypath + "/Twitter_Sentiment_Analysis/Directional_Feature_Libraries/LM11_pos_words.txt",
-                      librarypath + "/Twitter_Sentiment_Analysis/Directional_Feature_Libraries/LM11_neg_words.txt"]
-    keyfiles_bigrams = [librarypath + "/Twitter_Sentiment_Analysis/Directional_Feature_Libraries/ML_positive_bigram.csv",
-                        librarypath + "/Twitter_Sentiment_Analysis/Directional_Feature_Libraries/ML_negative_bigram.csv"]
-    keyfiles_news = [librarypath + "/Twitter_Sentiment_Analysis/Relevance_Feature_Libraries/news_library.txt"]
+    keyfiles_words = [librarypath + "/Directional_Feature_Libraries/Henry08_poswords.txt",
+                      librarypath + "/Directional_Feature_Libraries/Henry08_negwords.txt",
+                      librarypath + "/Directional_Feature_Libraries/LM11_pos_words.txt",
+                      librarypath + "/Directional_Feature_Libraries/LM11_neg_words.txt"]
+    keyfiles_bigrams = [librarypath + "/Directional_Feature_Libraries/ML_positive_bigram.csv",
+                        librarypath + "/Directional_Feature_Libraries/ML_negative_bigram.csv"]
+    keyfiles_news = [librarypath + "/Relevance_Feature_Libraries/news_library.txt"]
     keys = [get_news_agencies(keyfile) for keyfile in keyfiles_news] + [get_keywords(keyfile) for keyfile in keyfiles_words] + [get_keybigrams(keyfile) for keyfile in keyfiles_bigrams]
     key_library = ["News_agencies", "Henry08_pos", "Henry08_neg", "LM11_pos", "LM11_neg", "Hagenau13_pos", "Hagenau13_neg"]
     wordcounts_all = [[-1 for i in range(df_tweets.shape[0])] for j in range(len(keys) + 2)]
@@ -37,7 +39,7 @@ def main(df_tweets):
     df_tweets["Tweet_Length_characters"] = wordcounts_all[-2]
     df_tweets["Tweet_Length_words"] = wordcounts_all[-1]
     df_tweets = vader_tweet_sentiment(df_tweets)
-    df_tweets.to_parquet(githubpath + "df_" + company_name + "_features_added.parquet", index=False)
+    #df_tweets.to_parquet(githubpath + "df_" + company_name + "_features_added.parquet", index=False)
     return df_tweets
 
   

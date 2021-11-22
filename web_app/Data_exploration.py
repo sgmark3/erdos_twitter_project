@@ -7,6 +7,7 @@ image_vader = Image.open('web_app/images/vader.png')
 image_hourly_distribution = Image.open('web_app/images/hourly_distribution.png')
 
 def app():
+    st.title(' Tweet popularity ')
 
     st.markdown('''
     # Data Gathering

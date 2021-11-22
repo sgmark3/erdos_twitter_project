@@ -1,6 +1,6 @@
 
 import streamlit as st
-from web_app import web_app_intro, next_steps, intro, Data_exploration, ml_framework
+from web_app import web_app_intro, next_steps, intro, Data_exploration, ml_framework, acknowledgement
 
 st.sidebar.markdown(
 """
@@ -12,7 +12,8 @@ PAGES = {
     "Introduction" : intro,
     "Data exploration" : Data_exploration,
     "Machine learning framework" :ml_framework,
-    "next step" : next_steps
+    "Future plans" : next_steps,
+    "Acknowledgement" : acknowledgement
 }
 if "page" not in st.session_state:
     st.session_state.update({
@@ -24,11 +25,12 @@ if "page" not in st.session_state:
 
         # Default widget values
         "text": "https://twitter.com/markets/status/1458402478123327497",
-        "tweet_df" : None
+        "tweet_df" : None,
+        "prediction" : None
     })
 
 with st.sidebar:
-    page = st.radio("Select your page", tuple(PAGES.keys()))
+    page = st.radio("Navigation", tuple(PAGES.keys()))
     
 # pages = PAGES[page]
 # pages.app()

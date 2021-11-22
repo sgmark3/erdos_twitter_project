@@ -17,7 +17,7 @@ def vader_tweet_sentiment(tweetframe):
     positive_list = []
     negative_list = []
     neutral_list = []
-
+    tweetframe.drop(columns=['Compound_vader', 'Positive_vader', 'Negative_vader', 'Neutral_vader'], inplace=True, errors='ignore')
     # Get the compound positive, neutral, and negative sentiment
     # scores for the tweet dataframe
     for i in range(tweetframe['text'].shape[0]):
@@ -31,5 +31,5 @@ def vader_tweet_sentiment(tweetframe):
                        "Neutral_vader": neu})
     # Convert the Vader sentiment scores into a dataframe
     sentiment_scores = pd.DataFrame.from_dict(scores)
-    tweetframe = tweetframe.join(sentiment_scores)
+    tweetframe = tweetframe.join(sentiment_scores, how='left', lsuffix='_left')
     return tweetframe
