@@ -5,11 +5,9 @@ from vader_tweet_sentiment import vader_tweet_sentiment
 
 nlp = spacy.load('en_core_web_sm')
 
-localpath = "/Users/josht/Documents/Tweets_processed/"
-librarypath = "/Users/josht/Documents/GitHub/erdos_twitter_project"
-githubpath = "/Users/josht/Documents/GitHub/erdos_twitter_project/Data_Preprocessed/"
+librarypath = ".../GitHub/erdos_twitter_project"
+githubpath = ".../GitHub/erdos_twitter_project/Data_Preprocessed/"
 
-#def main(filename):
 def main(df_tweets):
     """
     This function downloads the tweet csv file into a dataframe,
@@ -19,9 +17,6 @@ def main(df_tweets):
     and finally delete the text column. 
     The resulting data frame is then saved to the GitHub directory.
     """
-  #  csv_directory = localpath + filename
-  #  company_name = filename[3:-4]         # Assuming raw file name "df_NameOfCompany.csv"
-  #  df_tweets = pd.read_csv(csv_directory)
     keyfiles_words = [librarypath + "/Twitter_Sentiment_Analysis/Directional_Feature_Libraries/Henry08_poswords.txt",
                       librarypath + "/Twitter_Sentiment_Analysis/Directional_Feature_Libraries/Henry08_negwords.txt",
                       librarypath + "/Twitter_Sentiment_Analysis/Directional_Feature_Libraries/LM11_pos_words.txt",
@@ -36,19 +31,13 @@ def main(df_tweets):
         wordcounts = tweet_to_wordcounts(df_tweets["text"].iloc[i], keys)
         for j in range(len(keys) + 2):
             wordcounts_all[j][i] = wordcounts[j]
-        if i % 10000 == 0:
-            print(i)
     for j in range(len(keys)):
         df_tweets["Word_count_" + key_library[j]] = wordcounts_all[j]
     df_tweets["Tweet_Length_characters"] = wordcounts_all[-2]
     df_tweets["Tweet_Length_words"] = wordcounts_all[-1]
     df_tweets = vader_tweet_sentiment(df_tweets)
-    #df_trivial_tweets = df_tweets.loc[df_tweets["Word_count_Henry08_pos"] == 0].loc[df_tweets["Word_count_Henry08_neg"] == 0].loc[df_tweets["Word_count_LM11_pos"] == 0].loc[df_tweets["Word_count_LM11_neg"] == 0].loc[df_tweets["Word_count_Hagenau13_pos"] == 0].loc[df_tweets["Word_count_Hagenau13_neg"] == 0].loc[df_tweets["News_agencies_names_count"] == 0].loc[df_tweets["Compound_vader"] == 0].loc[df_tweets["Positive_vader"] == 0].loc[df_tweets["Negative_vader"] == 0].loc[df_tweets["Neutral_vader"] == 1]
-    #df_tweets_shorten = df_tweets.drop(df_trivial_tweets.index).copy()
-    df_tweets.to_parquet(githubpath + "df_tweets_processed_Shashank.parquet", index=False)
-    #df_tweets.to_parquet(githubpath + "df_" + company_name + "_features_added.parquet", index=False)
-    #print(company_name + " finished")                  # Comment out if prefer quiet
-    return None
+    df_tweets.to_parquet(githubpath + "df_" + company_name + "_features_added.parquet", index=False)
+    return df_tweets
 
   
 def get_keywords(filename: str):
