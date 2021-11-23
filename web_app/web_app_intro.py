@@ -6,8 +6,15 @@ import pandas as pd
 
 
 def get_tweet_df(tweet_url):
-    return tweet.get_info(tweet_url)    
-
+    try:
+        return tweet.get_info(tweet_url)    
+    except:
+        st.warning('Please check if tweet url is valid or try again!')
+        st.session_state.text = ''
+        #st.session_state.tweet_df = None
+        tweet_url = None
+        
+        
 def get_prediction(tweet_df, tweet_url):
     tweet_text = tweet_df['text'].iloc[0].split('\n')
     tweet_df = get_text_analysis(tweet_df)
@@ -32,9 +39,9 @@ def get_prediction(tweet_df, tweet_url):
     st.info("   \n  ".join(tweet_text))    
     #st.text_area(label="Tweet text ", value="   \n  ".join(tweet_text), height=20 )
 
-    ## setting session states
-    st.session_state.text = tweet_url
-    st.session_state.tweet_df = tweet_df
+    # ## setting session states
+    # st.session_state.text = tweet_url
+    # st.session_state.tweet_df = tweet_df
     
     # if sesion state tweet_df is None or unchanged, get model and get fit again
     # else prediction = st.session_state.prediction
@@ -68,22 +75,26 @@ def app():
     if st.session_state.text is None:              # check if state of page is same as before
         st.session_state.text = default_tweet
     tweet_url = str(st.text_input("Enter tweet url ", st.session_state.text))
-    
+
     # check if state of page is same as before
     # this keeps dataframe unchanged when navigating tabs
     if (st.session_state.tweet_df is None) or (st.session_state.text != tweet_url ):
         #print(" ******** using new values ************")
         tweet_df = get_tweet_df(tweet_url)
     else:
-        #print(" ******** using OLD values ************")
+        print(" ******** using OLD values ************")
         tweet_df = st.session_state.tweet_df
     try:
         get_prediction(tweet_df, tweet_url)
+        st.session_state.text = tweet_url
+        st.session_state.tweet_df = tweet_df
     except:
         st.warning('Please check if tweet url is valid or try again!')
-        st.session_state.text = None
-        st.session_state.tweet_df = None
-    
+        st.session_state.text = ''
+        #st.session_state.tweet_df = None
+        tweet_url = None
+        tweet_df = None
+    st.session_state.text = ''
     st.markdown('''
                 # Details
 

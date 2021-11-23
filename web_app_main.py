@@ -24,7 +24,7 @@ if "page" not in st.session_state:
         "options": PAGES.keys(),
 
         # Default widget values
-        "text": "https://twitter.com/markets/status/1458402478123327497",
+        "text": None, 
         "tweet_df" : None,
         "prediction" : None
     })
