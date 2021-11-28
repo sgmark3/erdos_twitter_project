@@ -86,7 +86,6 @@ In order to predict a tweet's popularity, we choose several, well established cl
 The classification frameworks that we adopt are the following:
 
 * Logistic regression
-* K nearest neighbors
 * Random forests
 * Decision trees paired with adaboost
 * Light gradient boosting
