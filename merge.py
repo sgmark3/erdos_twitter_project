@@ -1,8 +1,21 @@
+"""
+This script filters out stock prices (open, close, high, low, volume) with timestamps that come after the time of creation of a tweet and fall
+within a predetermined time window. Based on the time intervals DT1, DT2 (input arguments), the corresponding stock prices are merged with the
+tweet of interest. The procedure is repeated for every tweet mentioning a snp500 company, and an aggregarted dataframe with stock price table
+for all those tweets is produced. Since there are around 500 companies and around ~900,000 tweets, the data is organized in batches of ~25 tickers.
+The script uses asynchronous parallel implementation using multiprocessing package to speed up the computation.
+
+Inputs -- df_tweet : tweets dataframe
+          df_stock : stock price dataframe
+          DT1 : buying time window
+          DT2 : selling time window
+"""
+
+
 import time
 import csv
 import pandas as pd
 import numpy as np
-#import concurrent.futures
 import itertools
 from itertools import compress
 import multiprocessing as mp
