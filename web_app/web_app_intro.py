@@ -28,13 +28,13 @@ def get_prediction(tweet_df, tweet_url):
     for col in tweet_df.columns:
         if col not in parameters_to_keep:
             tweet_df=tweet_df.drop(col,axis=1)
-    st.text('Dataframe before scaling')
-    st.dataframe(tweet_df)
+    #st.text('Dataframe before scaling')
+    #st.dataframe(tweet_df)
     with open('web_app/lgbm_scaler.pickle', 'rb') as f:
         scaler_ = pickle.load(f)
     tweet_df = pd.DataFrame(scaler_.transform(tweet_df), columns=tweet_df.columns)
-    st.text('Dataframe after scaling')
-    st.dataframe(tweet_df)
+    #st.text('Dataframe after scaling')
+    #st.dataframe(tweet_df)
     st.markdown("###### Tweet text :")
     st.info("   \n  ".join(tweet_text))    
     #st.text_area(label="Tweet text ", value="   \n  ".join(tweet_text), height=20 )
