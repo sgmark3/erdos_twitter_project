@@ -1,5 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
+from PIL import Image
+image_feature_imp = Image.open('web_app/images/feature_importance_RFC.png')
 def app():
     st.title(' Tweet popularity ')
 
@@ -96,6 +98,7 @@ The classification problem is to predict when a particular feature will eclipse 
     </body>
     </html
     ''', height=350)
+    st.image(image_feature_imp, caption='Feature importance for Random Forest model')
     st.markdown('''
     All of our machine learning code for prediction of tweet popularity can be found in the [ML_Model_Tweet_Prediction](https://github.com/msjithin/erdos_twitter_project/tree/main/ML_Model_Tweet_Prediction) directory of this Github repository.
 
