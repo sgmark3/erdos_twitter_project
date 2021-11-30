@@ -98,5 +98,11 @@ All of our machine learning code for prediction of tweet popularity can be found
 ## Prediction of Market Movement
 
 ### Features
+Conditioning on the predictions of which tweets will become popular, we aggregate the tweet data with the stock data- pairing them temporally. The overall feature list then becomes all of the aforementioned tweet features as well as the following:
+* Asset buy price
+* Temporal distance between the buy price and the tweet's creation
+* Temporal distance between the sell price and the tweet's creation
+
+We compare our model's performance both with and without the above features for two reasons. The first is that the stock data is incomplete, and therefore, the temporal distances are somewhat randomly distributed amongst fixed time intervals. Secondly, due to this variation in the temporal distances, we want to ensure that there is no over-fitting within the model implementations. 
 
 ### Machine Learning Framework
