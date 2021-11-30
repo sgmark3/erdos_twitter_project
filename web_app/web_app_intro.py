@@ -113,7 +113,8 @@ def app():
                 # Details
 
             ** Strategies **  
-
+            The setup uses Random Forest Classifier from Python's Scikit-Learn library to predict popularity of the given tweet using the tweet's features as input.
+            
             ** Outcomes **  
             The model predict whether the given tweet is expected to be 'Popular' or 'Not popular'.
 
