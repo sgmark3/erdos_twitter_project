@@ -121,6 +121,11 @@ def app():
 
             ** Implementation **    
             [Github repository](https://github.com/msjithin/erdos_twitter_project)
+            
+            *** Disclaimer ** 
+            This is part of a data scienc project and is not a recommendation for investing or trading.
+            All investing and trading in the securities market involves risk. This is not a solicitation or recommendation 
+            to buy or sell any stocks, options, or other financial instruments or investments.
                 ''')
     
     
