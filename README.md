@@ -106,3 +106,10 @@ Conditioning on the predictions of which tweets will become popular, we aggregat
 We compare our model's performance both with and without the above features for two reasons. The first is that the stock data is incomplete, and therefore, the temporal distances are somewhat randomly distributed amongst fixed time intervals. Secondly, due to this variation in the temporal distances, we want to ensure that there is no over-fitting within the model implementations. 
 
 ### Machine Learning Framework
+
+In order to predict which tweets will lead to financial gains, we again choose several classification algorithms, which are the following:
+* Naive Bayes
+* Quadratic Disrciminat Analysis
+* Random Forests
+
+In future work, the author's would like to expand this list as well as look to other classification techniques such as neural networks. In the above classification algorithms, our target is whether a return is positive or negative.  All of the relevant code can be found in the [ML_Model_Tweet_Prediction](https://github.com/msjithin/erdos_twitter_project/tree/main/ML_Model_Tweet_Prediction) directory of this Github repository. 
