@@ -1,10 +1,16 @@
 import streamlit as st
-import Twitter_data_get.get_tweet_info as tweet
+import os
+import sys
+import inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir) 
+from Twitter_data_get import get_tweet_info as tweet
 import pickle
 from Twitter_Sentiment_Analysis.Text_to_Features_Script import get_text_analysis
 import pandas as pd
 import joblib
-snp500_df = pd.read_csv("Data/Stock_indices/snp500_list.csv")
+snp500_df = pd.read_csv("Raw_data/Stock_indices/snp500_list.csv")
 
 def get_tweet_df(tweet_url):
     try:
@@ -28,12 +34,7 @@ def get_company_name(tweet_text):
 def get_prediction(tweet_df, tweet_url):
     tweet_text = tweet_df['text'].iloc[0].split('\n')
     tweet_df = get_text_analysis(tweet_df)
-    parameters_to_keep = ['entities_hashtags', 'entities_cashtags','entities_urls','public_metrics_followers_count',
-                'public_metrics_following_count', 'public_metrics_listed_count','public_metrics_tweet_count','media_type','entities_mentions',
-                'Word_count_Henry08_pos', 'Word_count_Henry08_neg',
-                'Word_count_LM11_pos', 'Word_count_LM11_neg',
-                'Word_count_Hagenau13_pos', 'Word_count_Hagenau13_neg',
-                'Tweet_Length_characters', 'Compound_vader','Positive_vader', 'Negative_vader', 'Neutral_vader']
+
     feature_columns = ['entities_cashtags', 'entities_hashtags', 'entities_urls',
                         'entities_mentions', 'public_metrics_followers_count', 'public_metrics_following_count',
                         'public_metrics_listed_count', 'public_metrics_tweet_count', 'Word_count_News_agencies',

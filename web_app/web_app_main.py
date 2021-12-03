@@ -1,6 +1,6 @@
 
 import streamlit as st
-from web_app import web_app_intro, next_steps, intro, Data_exploration, ml_framework, acknowledgement
+import web_app_intro, next_steps, intro, Data_exploration, ml_framework, acknowledgement
 
 st.sidebar.markdown(
 """
