@@ -10,7 +10,7 @@ import pickle
 from Twitter_Sentiment_Analysis.Text_to_Features_Script import get_text_analysis
 import pandas as pd
 import joblib
-snp500_df = pd.read_csv("Raw_data/Stock_indices/snp500_list.csv")
+snp500_df = pd.read_csv("Raw_Data/Stock_indices/snp500_list.csv") 
 
 def get_tweet_df(tweet_url):
     try:
