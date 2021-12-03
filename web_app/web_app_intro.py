@@ -1,10 +1,10 @@
 import streamlit as st
-import os
-import sys
-import inspect
-currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parentdir = os.path.dirname(currentdir)
-sys.path.insert(0, parentdir) 
+# import os
+# import sys
+# import inspect
+# currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+# parentdir = os.path.dirname(currentdir)
+# sys.path.insert(0, parentdir) 
 from Twitter_data_get import get_tweet_info as tweet
 import pickle
 from Twitter_Sentiment_Analysis.Text_to_Features_Script import get_text_analysis
