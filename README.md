@@ -1,7 +1,7 @@
 # Machine learning pipeline to extract a functional relationship between tweets and a stock's subsequent market reaction
 
 [Web application link](https://share.streamlit.io/msjithin/erdos_twitter_project/main/web_app_main.py)
-![alt text](https://github.com/[msjithin]/[erdos_twitter_project]/blob/[main]/twitter_stock.jpeg?raw=true)
+![alt text](https://github.com/msjithin/erdos_twitter_project/blob/main/twitter_stock.jpeg?raw=true)
 
 
 # Team Members:
