@@ -96,7 +96,7 @@ The classification frameworks that we adopt are the following:
 
 The classification problem is to predict when a particular feature will eclipse a certain threshold of likes. Throughout, this threshold is taken to be a hyperparameter, so that our code easily generalizes for any threshold of choice.
 
-All of our machine learning code for prediction of tweet popularity can be found in the [ML_Model_Tweet_Prediction](https://github.com/msjithin/erdos_twitter_project/tree/main/ML_Model) directory of this Github repository.
+All of our machine learning code for prediction of tweet popularity can be found in the [ML_Model_Tweet_Prediction](https://github.com/msjithin/erdos_twitter_project/tree/main/ML_Models) directory of this Github repository.
 
 ## Prediction of Market Movement
 
@@ -115,4 +115,4 @@ In order to predict which tweets will lead to financial gains, we again choose s
 * Quadratic Disrciminat Analysis
 * Random Forests
 
-In future work, the author's would like to expand this list by looking to other classification techniques such as neural networks. In the above classification algorithms, our target is whether a return is positive or negative.  All of the relevant code can be found in the [ML_Model_Tweet_Prediction](https://github.com/msjithin/erdos_twitter_project/tree/main/ML_Model) directory of this Github repository. 
+In future work, the author's would like to expand this list by looking to other classification techniques such as neural networks. In the above classification algorithms, our target is whether a return is positive or negative.  All of the relevant code can be found in the [ML_Model_Tweet_Prediction](https://github.com/msjithin/erdos_twitter_project/tree/main/ML_Models) directory of this Github repository. 
